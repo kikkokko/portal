@@ -1,13 +1,11 @@
-//- <header> 中身だけ記述 -----
-
-h1(class="site-title")
-	a(href="/game/")
+h1.site-title
+	a(href=local)
 		img(src=local+"img/logo.svg" alt=サイト名)
 
 
-nav(id="navi" class="")
-	ul(class="")
-		li: a(href="/game/") ゲームリスト
-		li: a(href="/game/about.html") 配信について
+nav#navi
+	ul
+		li: a(href=local) ゲームリスト
+		li: a(href=local+"about.html") 配信について
 		li: a(href="https://www.youtube.com/@coccokikko") Youtube
 		li: a(href="/") きっこっこ*

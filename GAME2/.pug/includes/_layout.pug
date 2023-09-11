@@ -1,34 +1,96 @@
 include _database.pug
+block 個別設定
+	//- -
+	//- 	let ゲーム名
+	//- 	let 説明文
+	//- 	let OGPイメージ
+	//- 	let あらすじ縦 = false
+
+mixin SECTION(ID,TITLE)
+	section(id=ID)
+		h3.section-title
+			case ID
+				when "impression"
+					- 題 = "クリア感想"
+				when "memo"
+					- 題 = "プレイメモ"
+				when "character"
+					- 題 = "登場人物"
+				when "story"
+					- 題 = "お話の内容まとめ"
+				when "data"
+					- 題 = "ゲームデータ"
+				default
+					- 題 = TITLE
+			| #{題}
+		section
+			block
+
+mixin youtube(TITLE,URL)
+	section#youtube
+		h4.subtitle: a(href="https://www.youtube.com/@coccokikko", target="_blank", title="Youtube")
+			img.svg-h-icon(src=local+"img/svg/youtube-line.svg")
+			| #{TITLE}
+		.video-iframe
+			iframe(width="560", height="315", src=URL, title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen, loading="lazy")
+mixin twitch(TITLE,URL)
+	section#twitch
+		h4.subtitle: a(href="https://www.twitch.tv/kikkoch/" target="_blank")
+			img.svg-h-icon(src=local+"img/svg/bxl-twitch.svg")
+			| #{TITLE}
+		.video-iframe
+			iframe#embed-twitch(src=URL, frameborder="0" allowfullscreen="true" scrolling="no" loading="lazy")
+
 doctype html
 html(lang="ja")
 	head
 		include _meta.pug
 
 	body
-		header
+		header#header(class="wrapper frex")
 			include _header.pug
 
-		main
-			article#page.container
-				h2.game-title=ページタイトル
-				section#summary.page-chest
-					div
-						img(src=URL+"package.jpg", alt width="100%")
-						p.series
-						p.tag
+		main: article#page(class="container")
 
-					div.text
+			h2.game-title= allgame[ID].title
+
+			section#summary(class = あらすじ縦 ? "" : "page-chest")
+				div
+					a.ama-link(href="https://amzn.to/xxx" target="_blank")
+						img(src="package.jpg" width="100%")
+					p.series
+						if allgame[ID].series !== undefined
+							a(href=local+allgame[ID].series+"シリーズ")= allgame[ID].series+"シリーズ"
+					mixin taglist(key)
+						case key
+							when "stream"
+								- SET = key ? "配信あり" : "配信なし"
+							when "taro"
+								- SET = key ? "たろう配信あり" : ""
+							default
+								- SET = allgame[ID][key]
+						if allgame[ID][key] !== undefined
+							a(href=local+"#"+SET)= SET
+					p.tag
+						+taglist("platform")
+						+taglist("genre")
+						+taglist("stream")
+						+taglist("taro")
+						if allgame[ID].status == "ED未コンプ"
+							a(href=local+"#クリア") クリア
+						+taglist("status")
+				div
+					block あらすじなし
 						h3.section-title あらすじ
-						block あらすじ
-				section#video
-				h3.section-title 配信ログ
-				div.video-grid
+					block あらすじ
+
+			block 本文
 
 
 
-		footer(id="footer")
-			block footer
-				include _footer.pug
+		button#back-to-top(aria-label="トップに戻る" type="button")
+		footer#footer
+			include _footer.pug
 
 		block script
 			script(src="")

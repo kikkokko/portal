@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きっこっこ*-ゲーム部-</title>
+    <title>配信について-きっこのゲーム手帖-</title>
     <link rel="shortcut icon" href="/game/img/favicon.ico">
     <link rel="alternate" hreflang="ja" href="https://kikko.pages.dev/">
 
@@ -29,17 +29,17 @@
 
     <!-- ogp -->
     <meta property="og:site_name" content="きっこのゲーム手帖" />
-    <meta property="og:url" content="https://kikko.pages.dev/game/" />
+    <meta property="og:url" content="https://kikko.pages.dev/game/about.html" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="きっこのゲーム手帖-エコーナイト2-" />
+    <meta property="og:title" content="きっこのゲーム手帖-配信について-" />
     <meta property="og:description" content="柚木桔子のポータルサイト" />
-    <meta property="og:image" content="https://kikko.pages.dev/img/twittercard.jpg" />
+    <meta property="og:image" content="https://kikko.pages.dev/game/img/twittercard.jpg" />
     <meta property="og:locale" content="ja_JP" />
     <!-- <meta property="fb:app_id" content="AppID"> -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <!-- <meta name="twitter:site" content="@moshamusha2010" /> -->
     <meta name="twitter:description" content="きっこのゲームまとめ" />
-    <meta name="twitter:image:src" content="https://kikko.pages.dev/img/twittercard.jpg" />
+    <meta name="twitter:image:src" content="https://kikko.pages.dev/game/img/twittercard.jpg" />
 
 </head>
 
@@ -52,9 +52,9 @@
         </h1>
         <nav id="navi" class="menu">
             <ul class="nav-menu">
-                <li><a href="/game/list.html">ゲームリスト</a></li>
-                <li><a href="/">ABOUT</a></li>
-                <li><a href="/">COMPANY</a></li>
+                <li><a href="/game/">ゲームリスト</a></li>
+                <li><a href="/game/about.html">配信について</a></li>
+                <li><a href="https://www.youtube.com/@coccokikko">Youtube</a></li>
                 <li><a href="/">きっこっこ*</a></li>
             </ul>
         </nav>
@@ -74,39 +74,48 @@
 
         <!-- contents -->
         <section class="container wrapper">
-            <h2 class="section-title">プレイ中</h2>
-            <div id="list" class="">
-                <ul class="game-list">
-                    <li class="target" data-category="Steam On Playing">
-                        <a href="/game/stardew-valley/">
-                            <img src="/game/stardew-valley/package.png" alt="">
-                            <h3 class="game-title">Stardew Valley</h3>
-                        </a>
-                        <p class="series"></p>
-                        <p class="tag"><a href="#Steam">Steam</a><a href="#配信あり" class="haishin-tag">配信あり</a><a href="#プレイ中">プレイ中</a></p>
-                    </li>
+            <h3 class="section-title">配信ログ</h3>
 
-                    <li class="target" data-category="PS On Playing">
-                        <a href="/game/vagrant-story/">
-                            <img src="/game/vagrant-story/package.jpg" alt="">
-                            <h3 class="game-title">ベイグラントストーリー</h3>
-                        </a>
-                        <p class="series"></p>
-                        <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#プレイ中">プレイ中</a></p>
-                    </li>
+            <div class="video-grid">
 
-                    <li class="target" data-category="PS On Playing">
-                        <a href="/game/echo-night/">
-                            <img src="/game/echo-night/package.jpg" alt="">
-                            <h3 class="game-title">ECHO NIGHT</h3>
+                <!-- Youtube最新動画 -->
+                <section id="youtube">
+                    <h4 class="subtitle">
+                        <a href="https://www.youtube.com/@coccokikko" target="_blank" title="Youtube">
+                            <img class="svg-h-icon" src="/game/img/svg/bxl-youtube.svg">Youtube最新動画
                         </a>
-                        <p class="series">ECHO NIGHTシリーズ</p>
-                        <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#プレイ中">プレイ中</a></p>
-                    </li>
-                </ul>
+                    </h4>
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNqNfLHg1hhHzQTxnnkvEbWiLdcCpeVZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <!--<ul class="u_active-box100 font-bold btn btn01 flex">
+                        <li>
+                            <a href="https://www.youtube.com/@coccokikko" target="_blank">
+                                <img class="svg-icon" src="/img/svg/bx-tv.svg">Youtube</a>
+                        </li>
+                    </ul> -->
+                </section>
 
-                <a class="link-text" href="/game/list.html">すべてのゲーム一覧</a>
+                <!-- Twitch最新動画 -->
+                <section id="Twitch">
+                    <h3 class="sub-title">
+                        <a href="https://wwwtwitch.tv/kikkoch/" target="_blank">
+                            <img class="svg-h-icon" src="/game/img/svg/bxl-twitch.svg">Twitch最新動画
+                        </a>
+                    </h3>
+                    <div>
+                        <iframe id="embed-twitch" src="https://player.twitch.tv/?autoplay=false&collection=KNBEdVGxghUfMg&video=videoId&parent=kikko.pages.dev/game/about.html" frameborder="0" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
+                    </div>
+                    <!-- <ul class="u_active-box100 font-bold btn btn01 flex">
+                        <li>
+                            <a href="https://www.twitch.tv/kikkoch/" target="_blank">
+                                <img class="svg-icon" src="//game/img/svg/bxl-twitch.svg">Twitch</a>
+                        </li>
+                    </ul>
+                    -->
+                </section>
             </div>
+
         </section>
         <!-- contents -->
 

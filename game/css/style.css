@@ -377,6 +377,7 @@ input[type="checkbox"] {
 [value="Default"]:checked~.targets .target:not([data-category~="On"]).target:not([data-category~="Off"]),
 [value="On"]:checked~.targets .target:not([data-category~="On"]),
 [value="Off"]:checked~.targets .target:not([data-category~="Off"]),
+[value="Cocco-On"]:checked~.targets .target:not([data-category~="Cocco-On"]),
 [value="Non"]:checked~.targets .target:not([data-category~="Non"]),
 [value="Now"]:checked~.targets .target:not([data-category~="Now"]),
 [value="Playing"]:checked~.targets .target:not([data-category~="Playing"]),
@@ -819,14 +820,14 @@ tr:nth-child(even) {
 
 
 /*----挿入動画----*/
-#page .video-grid {
+.video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-auto-rows: 1fr;
     grid-gap: 3em;
 }
 
-#page .video-iframe {
+.video-iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
 
