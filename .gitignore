@@ -19,5 +19,6 @@ ehthumbs_vista.db
 
 [Dd]esktop.ini
 
-# Xlsxファイル
+# webで使えない拡張子
 *.xlsx
+*.avi
