@@ -1,0 +1,367 @@
+@use "include/mixin" as *;
+
+
+
+/*-------------------------------------------
+
+    ボックスのススタイル
+
+	-------------------------------------------*/
+
+
+/*------ ボックスの線 ----------*/
+
+.border-beige {
+    border: solid 1px $color-beige;
+}
+
+.border-under {
+    padding-bottom: 5px;
+    border-bottom: solid 1px $color-text;
+}
+
+/*--白の下破線--*/
+.kasen {
+    border-bottom: dashed 3px $color-white;
+}
+
+/*------ ボックスの縁 ----------*/
+
+/*--丸縁10--*/
+.radius10 {
+    border-radius: 10px;
+}
+
+/*--丸縁20--*/
+.radius20 {
+    border-radius: 20px;
+}
+
+/*------ ボックスの中 ----------*/
+
+/*--インデント--*/
+.indent {
+    padding-left: 30px;
+    /*--スマホ時、0px--*/
+}
+
+.indent-right {
+    padding-right: 30px;
+    /*--スマホ時、0px--*/
+}
+
+@include sp {
+
+    /*--インデント--*/
+    .indent {
+        padding-left: 0px;
+        /*--スマホ時、30px--*/
+    }
+
+    .phone-indent {
+        padding-left: 10px;
+    }
+}
+
+
+
+/*--カラムギャップ--*/
+.c-gap20 {
+    column-gap: 20px;
+}
+
+/*--カラムギャップ--*/
+.c-gap30 {
+    column-gap: 30px;
+}
+
+/*-------------------------------------------
+
+    余白
+
+	-------------------------------------------*/
+
+/*--上マージン--*/
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .phone-mt30 {
+        margin-top: 30px;
+    }
+
+}
+
+
+/*--下マージン--*/
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+
+/*--リストスタイルが必要な時--*/
+.list {
+    margin: 0.3em 0;
+    padding-left: 40px;
+    list-style-type: disc;
+}
+
+
+
+/*-------------------------------------------
+
+        背景色
+
+        -------------------------------------------*/
+
+.bg-basepink {
+    background-color: $color-base;
+}
+
+.bg-pink {
+    background-color: $color-pink;
+}
+
+.bg-white {
+    background-color: $color-white;
+}
+
+.bg-beige {
+    background-color: $color-beige;
+}
+
+.bg-green {
+    background-color: $color-green;
+}
+
+.bg-yellowgreen {
+    background-color: $color-yellowgreen;
+}
+
+/*-------------------------------------------
+
+        文字スタイル
+
+        -------------------------------------------*/
+
+
+.font-small {
+    font-size: 1.3rem;
+}
+
+.font-smallsmall {
+    font-size: 1rem;
+}
+
+
+.text-right {
+    text-align: right;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/*------ 文字色 --------*/
+
+.font-green {
+    color: $color-green;
+}
+
+.font-gray {
+    color: $color-gray;
+}
+
+.font-ash {
+    color: $color-ash;
+}
+
+.font-beige {
+    color: $color-beige;
+}
+
+.font-white {
+    color: $color-white;
+}
+
+/*--黄色マーカー--*/
+.marker {
+    background: linear-gradient(transparent 50%, #FFF001 50%);
+}
+
+.font-mplus {
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+
+/*-------------------------------------------
+
+        リンクスタイル
+
+        -------------------------------------------*/
+
+.nondeco-a {
+    text-decoration: none;
+}
+
+
+/*-------------------------------------------
+
+    リンク用ボタンのススタイル
+
+	-------------------------------------------*/
+
+
+/*-------------------------
+    リンク用ボタン
+------------------------*/
+.btn a {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: $color-text;
+    font-size: 1.4rem;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn a:hover {
+    color: $color-white;
+}
+
+/*------------------------
+    terget blankに ↗ 画像
+-----------------------*/
+.btn a[target=_blank] {
+    background-image: url(../img/svg/bx-link-external-white.svg);
+    // background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-external-link%22%3E%3Cpath%20d%3D%22M18%2013v6a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2V8a2%202%200%200%201%202-2h6%22%3E%3C%2Fpath%3E%3Cpolyline%20points%3D%2215%203%2021%203%2021%209%22%3E%3C%2Fpolyline%3E%3Cline%20x1%3D%2210%22%20y1%3D%2214%22%20x2%3D%2221%22%20y2%3D%223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E');
+    background-size: 1.4rem;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.blank {
+    background-image: url(../img/svg/bx-link-external-666.svg);
+    padding-right: 3.5rem;
+    background-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-position: right 0.2rem center;
+}
+
+/*-------------------------
+    ピンクに変わる
+------------------------*/
+
+.btn01 a {
+    background-color: $color-pink;
+    border: 2px solid #fff;
+}
+
+.btn01 a:hover {
+    background-color: $color-vividpink;
+    border: 2px solid $color-vividpink;
+}
+
+
+
+
+/*---------リンクボタン用-------*/
+
+/*--ピンクマーカー--*/
+.marker-link a {
+    padding: 0 5px;
+    background: linear-gradient($color-vividpink, $color-vividpink) 0 100% no-repeat;
+    background-size: 0 0.7em;
+    transition: background 0.2s ease-in-out 0s;
+
+    &:hover {
+        background-size: 100% 0.7em;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+/*--黒下線--*/
+// Animation 1
+// Underline - Left to Right
+.link-effect1 a {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        bottom: 0;
+        height: 2px;
+        margin: -3px 0;
+        left: 0;
+        background-color: $color-text;
+        transition: all 0.15s ease-in 0s;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+
+    &[target=_blank] {
+
+        padding-right: 1em;
+
+        &:hover {
+            background-image: url(../img/svg/bx-link-external-beige.svg);
+            // background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-external-link%22%3E%3Cpath%20d%3D%22M18%2013v6a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2V8a2%202%200%200%201%202-2h6%22%3E%3C%2Fpath%3E%3Cpolyline%20points%3D%2215%203%2021%203%2021%209%22%3E%3C%2Fpolyline%3E%3Cline%20x1%3D%2210%22%20y1%3D%2214%22%20x2%3D%2221%22%20y2%3D%223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E');
+            background-size: 1.4rem;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+    }
+}

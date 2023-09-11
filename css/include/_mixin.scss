@@ -1,0 +1,71 @@
+@use "sass:math";
+/*-------------------------------------------
+	共通カラー
+-------------------------------------------*/
+$color-text: #111;
+$color-base: #F4C7C3;
+$color-pink: #FFEFEE;
+$color-vividpink: #FFB9D1;
+$color-yellow: #FFF001;
+// $color-orange: #FFBB37;
+$color-orange: #FAB872;
+$color-skin: #FFEFD2;
+$color-white: #fff9fc;
+$color-beige: #E7DAD1;
+$color-gray: #ccc;
+$color-ash: #BDBDBD;
+$color-green: #008000;
+$color-yellowgreen: #d5e488;
+
+$font-round: "CorpRoundKai", "Kosugi Maru", "BIZ UDGothic", sans-serif;
+
+
+// ------------------------------------------
+// フォント一覧
+// ------------------------------------------
+// font-family: 'Noto Sans JP', sans-serif;
+// font-family: 'Kosugi', sans-serif;
+// font-family: 'Sawarabi Gothic', sans-serif;
+// font-family: 'M PLUS 2', sans-serif;
+// font-family: 'Kosugi Maru', sans-serif;
+// font-family: 'Kaisei Opti', serif;
+
+@font-face {
+	font-family: "CorpRoundKai";
+	src: url("../font/corp-round-kai.woff2") format("woff2");
+}
+
+
+
+// メディアクエリ
+// ------------------------------------------------------------
+$mq-sp: 650px;	// スマホに切り替わるブレイクポイント
+$mq-pc: 651px;	// PCに切り替わるブレイクポイント
+@mixin sp {
+	@media screen and (max-width: $mq-sp) {
+		@content;
+	}
+}
+@mixin pc {
+	@media screen and (min-width: $mq-pc) {
+		@content;
+	}
+}
+@mixin mq($-breakpoint, $-minmax: min) {
+	@media screen and (#{$-minmax}-width: #{$-breakpoint}px) {
+		@content;
+	}
+}
+
+
+
+
+// ------------------------------------------------------------
+// MIXIN, Function など
+// ------------------------------------------------------------
+
+// PXをVWに変換 *****
+@function pxvw($-px, $-viewport: 1440) {
+	$mathVW: math.div($-px, $-viewport) * 100vw;
+	@return math.div(round($mathVW * 1000), 1000);
+}

@@ -1,0 +1,1283 @@
+@charset "UTF-8";
+
+html {
+    /* フォントサイズを100%で指定しておくことで、ユーザーがブラウザで設定したフォントサイズが正しく反映されます */
+    font-size: 62.5%;
+}
+
+/*
+フッターを画面下に配置するために、
+「position: relative;」を設定
+「min-height」で最小の高さを画面の高さにあわせる
+*/
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    font-size: 1.4rem;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+p {
+    /* pのリセット */
+    margin: 0px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+img {
+    /* 画像が画面の横幅からはみ出るのを防ぐためにmaxサイズを設定します */
+    max-width: 100%;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+/*
+コンテンツのワイドビュー用
+*/
+.wrapper {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/*基本リスト幅のためのクラス*/
+.wide-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/*コンテンツ幅を設定するための共通クラス*/
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+
+.site-title {
+    width: 180px;
+    line-height: 1px;
+    margin-bottom: 15px;
+}
+
+.site-title a {
+    width: 180px;
+    line-height: 1px;
+    display: block;
+}
+
+
+
+/*-------------------------------------------
+
+
+⇓ヘッダー
+
+
+-------------------------------------------*/
+#header {
+    height: 50px;
+    background-color: #F4C7C3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+#list-header {
+    margin-top: 10px;
+}
+
+/* aタグのリンク範囲を親要素のサイズに広げる */
+#header .site-title a {
+    display: block;
+}
+
+/*-------------------------------------------
+グローバルナビ
+-------------------------------------------*/
+
+#navi ul {
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+#navi li {
+    text-align: center;
+    min-width: 90px;
+    line-height: normal;
+}
+
+#navi a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/*-------------------------------------------
+
+
+⇑ヘッダーおわり
+
+
+-------------------------------------------*/
+
+
+
+
+
+/*-------------------------------------------
+
+メイン
+
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+
+
+！ゲームリストページ！
+
+大枠id="list"なので#listでcss設定
+
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+ゲームリストのメニュー
+-------------------------------------------*/
+
+
+#list-menu ul {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+#list-menu li {
+    text-align: center;
+    min-width: 90px;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#list-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 1.2rem;
+}
+
+#list-menu a:hover {
+    transition: all 0.2s;
+    background: #333;
+    color: #fff;
+}
+
+#list-menu li:hover {
+    background: #333;
+}
+
+
+/*-------------------------------------------
+ゲームリスト内デザイン
+-------------------------------------------*/
+
+/*------ h2セクションタイトル -----*/
+#list .section-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#list .section-title::before {
+    content: "";
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: url(/game/img/svg/bxs-joystick.svg);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/*----------
+ ⇓ ゲームタイトル表記
+------------*/
+#list .game-title {
+    font-size: 1.6rem;
+    display: block;
+    height: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#list .game-title span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left: 0.3rem;
+}
+
+#list .game-title span::before {
+    content: "-";
+}
+
+#list .game-title span::after {
+    content: "-";
+}
+
+/*----------
+ ⇑ ゲームタイトルおわり
+------------*/
+
+.series {
+    /*------シリーズ表記-----*/
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.series::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(/img/svg/bx-book.svg);
+    background-size: 1.2rem;
+    margin-right: 3px;
+}
+
+.series:empty::before {
+    content: "";
+    background: none;
+}
+
+.tag a {
+    /*------タグ表記-----*/
+    font-size: 0.8rem;
+    color: #999;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    text-align: center;
+    min-width: 50px;
+    border: solid 1px #999;
+    border-radius: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/*-------------------------------------------
+
+ゲームリストのフィルター
+
+絞り込み参考：
+https://www.webdesignleaves.com/pr/plugins/filtering-component-with-css.html
+https://webdesign.tutsplus.com/how-to-build-a-filtering-component-in-pure-css--cms-33111t
+
+-------------------------------------------*/
+
+
+/* ラジオボタンを非表示に*/
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/* 以下はラベルのスタイル */
+.label label {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.label label:hover {
+    background: #333;
+    color: #fff;
+}
+
+.label ol {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+
+.label {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label dt {
+    width: 5%;
+    height: 20px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.filters dl dd {
+    width: 95%;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.svg-icon-label {
+    width: 2rem;
+    margin-right: 1.1rem;
+    vertical-align: baseline;
+}
+
+
+/* フィルタリング  */
+
+[value="All"]:checked~.targets [data-category] {
+    display: block;
+}
+
+
+/* Else チェックでElseとSteam  */
+[value="Default"]:checked~.targets .target:not([data-category~="On"]).target:not([data-category~="Off"]),
+[value="On"]:checked~.targets .target:not([data-category~="On"]),
+[value="Off"]:checked~.targets .target:not([data-category~="Off"]),
+[value="Non"]:checked~.targets .target:not([data-category~="Non"]),
+[value="Now"]:checked~.targets .target:not([data-category~="Now"]),
+[value="Playing"]:checked~.targets .target:not([data-category~="Playing"]),
+[value="Clear"]:checked~.targets .target:not([data-category~="Clear"]).target:not([data-category~="Part"]),
+[value="Part"]:checked~.targets .target:not([data-category~="Part"]),
+[value="Stop"]:checked~.targets .target:not([data-category~="Stop"]),
+[value="Nothing"]:checked~.targets .target:not([data-category~="Nothing"]),
+[value="SFC"]:checked~.targets .target:not([data-category~="SFC"]),
+[value="PS"]:checked~.targets .target:not([data-category~="PS"]),
+[value="PS_archive"]:checked~.targets .target:not([data-category~="PS_archive"]),
+[value="PS2"]:checked~.targets .target:not([data-category~="PS2"]),
+[value="PSP"]:checked~.targets .target:not([data-category~="PSP"]),
+[value="DS"]:checked~.targets .target:not([data-category~="DS"]),
+[value="Else"]:checked~.targets .target:not([data-category~="Else"]).target:not([data-category~="Steam"]),
+[value="Free"]:checked~.targets .target:not([data-category~="Free"]) {
+    display: none;
+}
+
+/*-----
+[value="Default"]:checked~.filters [for="Default"],
+[value="Non"]:checked~.filters [for~="Non"],
+[value="All"]:checked~.filters [for="All"],
+[value="On"]:checked~.filters [for="On"],
+[value="Off"]:checked~.filters [for="Off"],
+[value="Playing"]:checked~.filters [for="Playing"] [value="Clear"]:checked~.filters [for="Clear"],
+[value="Clear"]:checked~.filters [for="Clear"],
+[value="Part"]:checked~.filters [for="Part"],
+[value="Dont"]:checked~.filters [for="Dont"] {
+    background: #994B8A;
+    color: #fff;
+}
+-----*/
+
+/*-------------------------------------------
+
+ゲームリストのカードデザイン
+
+-------------------------------------------*/
+
+#list {
+    padding-top: 10px;
+    padding-bottom: 160px;
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 2em;
+}
+
+
+.targets {
+    border: solid 1px #333;
+    border-radius: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 3%;
+}
+
+.game-list li {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+/*
+  vertical-align: top;
+  画像の下にできる隙間を消す
+  */
+.game-list img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.link-text {
+    display: block;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    padding: 0 20px;
+}
+
+
+/*-------------------------------------------
+
+
+ ⇑ ゲームリスト終わり
+
+
+-------------------------------------------*/
+
+
+
+
+
+/*-------------------------------------------
+
+
+！個別ページ！
+
+大枠id="page"なので#pageでcss設定
+
+
+-------------------------------------------*/
+
+#page section {
+    margin-bottom: 130px;
+}
+
+#page section > section {
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+#page section > div > section {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/*---ゲームタイトル h2----*/
+#page .game-title {
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 1px;
+    margin-bottom: 20px;
+    margin-top: 1.6rem;
+}
+
+#page .game-title span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+#page .game-title span::before {
+    content: "-";
+}
+
+#page .game-title span::after {
+    content: "-";
+}
+/*---ゲームタイトル h2おわり---*/
+
+/*---セクションタイトル h3---*/
+#summary .section-title{
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#page .section-title:not(#summary .section-title){
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+#page .section-title:not(#summary .section-title)::before,
+#page .section-title:not(#summary .section-title)::after {
+    content: "";
+    background: #333;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 1.5px;
+    margin: 0 0.8em;
+  }
+
+/*---セクションタイトル h3おわり---*/
+
+#page .subtitle {
+    /*---h4---*/
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+}
+
+#Page .subsubtitle {
+     /*---h5---*/
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.page-chest {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2em;
+}
+
+#page p {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.indent {
+    margin-left: 15px;
+}
+/*----------
+ページメニュー
+------------*/
+
+#page .menu ul {
+    font-size: 1.6rem;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#page .menu li {
+    list-style: none;
+    text-align: center;
+    line-height: normal;
+}
+
+#page .menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 1.2rem;
+}
+
+#page .menu a:hover {
+    transition: all 0.2s;
+    background: #333;
+    color: #fff;
+}
+
+#page .menu li:hover {
+    background: #333;
+}
+
+/*----------
+ページメニューおわり
+------------*/
+
+/*--------------
+リストとか
+----------------*/
+
+#page ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+#page li:not(.list-style li, .menu li) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 2rem;
+    list-style-position: outside;
+    list-style: disc;
+}
+
+#page .list-style ul li {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    list-style: disc;
+    list-style-position: outside;
+}
+
+#page .list-style ol li {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 2rem;
+    list-style: decimal;
+    list-style-position: outside;
+}
+
+#character li {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 2rem;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+#character {
+    font-size: 1.4rem;
+}
+
+/*-------テーブルのボーダーが田-----*/
+.table-border_table {
+    width: 100%;
+    border-collapse:  collapse; /* セルの線を重ねる */
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border: dashed 1px #999;
+}
+
+.table-border_table th {
+    border: dashed 1px #999;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+.table-border_table td {
+    border: dashed 1px #999;
+    padding: 5px;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+
+.table-border_table th {
+    min-width:  70px;
+    /* min-height: 50px; */
+}
+
+/*-------テーブルのボーダーが田-----*/
+
+/*-------テーブルのボーダーが罫線だけ-----*/
+.table-border_line {
+    width: 100%;
+    border-collapse:  collapse; /* セルの線を重ねる */
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.table-border_line th {
+    border: dashed 1px #999;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+.table-border_line td {
+    border-bottom: dashed 1px #999;
+    padding: 5px;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+
+.table-border_line th {
+    min-width:  70px;
+    /* min-height: 50px; */
+}
+
+/*-------テーブルのボーダーが田-----*/
+
+
+
+
+/*
+tr:nth-child(odd) {
+    background-color:  #fff;
+    color: #000;
+}
+
+tr:nth-child(even) {
+    background-color:  #E5E5E6;
+    color: #000;
+}
+*/
+
+
+
+/*---dl----*/
+#page dl {
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#page dt {
+    width: 120px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-bottom: dashed 1px #999;
+    margin-bottom: 10px;
+}
+
+#page dd {
+    flex-basis: calc(100% - 120px); /*幅*/
+    padding-bottom: 5px;
+    border-bottom: dashed 1px #999;
+    margin-bottom: 10px;
+}
+
+/*---dlおわり----*/
+
+
+
+/*----------
+プレイメモ
+------------*/
+
+#page .excel{
+    width: 100%;
+    height: 80%;
+    border: solid 1px #333;
+    padding: 20px;
+}
+
+#page .box-border{
+    border: solid 1px #333;
+    padding: 20px;
+}
+
+#page .rightside {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+}
+
+#page .link-blank {
+    font-weight: bold;
+}
+
+#page .link-blank::after {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(/game/img/svg/bx-link-external-666.svg);
+    background-size: 1.5rem;
+    margin-right: 3px;
+}
+
+
+
+/*----挿入動画----*/
+#page .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 3em;
+}
+
+#page .video-iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    & iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+/*----挿入動画おわり----*/
+
+/*----------
+その他
+------------*/
+.cursor-point {
+    cursor:pointer;
+}
+
+.font-bold {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/*--色--*/
+.bc-black {
+    background-color: #000;
+    color: #E5E5E6;
+}
+
+.bc-black a:not(.nav-menu a) {
+    color: #E5E5E6;
+}
+
+.bc-gray {
+    background-color: #999;
+    color: #000;
+}
+
+
+
+
+
+
+/*-------------------------------------------
+
+
+⇓ ABOUT
+
+
+-------------------------------------------*/
+
+/*-------------------------------------------
+    mainvisual
+    -------------------------------------------*/
+#mainvisual {
+    margin-bottom: 60px;
+}
+
+
+/*-------------------------------------------
+        INDEX
+        -------------------------------------------*/
+#index {
+    background-color: #F5F5F5;
+    padding: 60px;
+    margin-bottom: 60px;
+}
+
+#index .index-inner {
+    border: solid 1px #333;
+    padding: 30px;
+}
+
+/*
+        「display: table;」と「margin: 0 auto;」で中央に配置。
+        ※この方法を使うとテキストの長さに応じて可変で中央配置できる
+        */
+#index .index-inner .index-list {
+    display: table;
+    margin: 0 auto;
+}
+
+#index .index-inner .index-list li {
+    margin-bottom: 20px;
+}
+
+/* リストの最後は下にマージンをつけない */
+#index .index-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/*-------------------------------------------
+
+
+ ⇑ About終わり
+
+
+-------------------------------------------*/
+
+/*-------------------------------------------
+
+
+ ⇑ 個別ページ終わり
+
+
+-------------------------------------------*/
+
+/*-------------------------------------------
+
+
+    photo-list
+
+
+    -------------------------------------------*/
+
+/*
+    flex-wrap: wrap;
+    →改行あり
+    justify-content: space-between;
+    →両端揃えで均等に配置
+    */
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    /*--折り返しの指定--*/
+    justify-content: space-between;
+    row-gap: 15px;
+    margin-bottom: 60px;
+}
+
+.photo-list li {
+    list-style: none;
+    width: 49%;
+}
+
+/*画像の下にできる隙間を消す*/
+.inner li img {
+    vertical-align: bottom;
+}
+
+/*-------------------------------------------
+    DETAIL
+    -------------------------------------------*/
+#detail {
+    background-color: #F5F5F5;
+    padding: 60px;
+    margin-bottom: 60px;
+}
+
+#detail .flex {
+    display: flex;
+}
+
+#detail dl {
+    width: 35%;
+    border-right: solid 1px #333;
+    padding-right: 40px;
+}
+
+#detail dt {
+    font-weight: bold;
+}
+
+#detail dd {
+    margin-bottom: 10px;
+}
+
+#detail dd:last-child {
+    margin-bottom: 0;
+}
+
+#detail .detail-text {
+    width: 65%;
+    padding-left: 40px;
+}
+
+#detail .detail-text p {
+    margin-bottom: 20px;
+}
+
+#detail .detail-text .detail-link {
+    color: #333;
+}
+
+#detail .detail-text .detail-link:hover {
+    opacity: 0.8;
+}
+
+
+/*-------------------------------------------
+
+
+    ⇑ 各ページ用設定終わり！
+
+
+    -------------------------------------------*/
+
+
+/*-------------------------------------------
+
+
+    単発デザイン設定用
+
+
+    -------------------------------------------*/
+
+
+/*--フレックス--*/
+.flex {
+    display: flex;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*--Flexコンテンツ用
+            横幅指定のみ箱--*/
+.box100 {
+    /*-- 横100%(一列に1つ--*/
+    width: 100%;
+}
+
+.box50 {
+    /*--横50%(一列に2つ) --*/
+    width: 50%;
+}
+
+.box55 {
+    width: 55%;
+}
+
+.box33 {
+    /*---横33%(一列に3つ)--*/
+    width: 33%;
+}
+
+
+
+.svg-icon {
+    width: 1.8rem;
+    margin-right: 1.1rem;
+    vertical-align: middle;
+}
+
+.svg-h-icon {
+    width: 2.5rem;
+    min-width: 1.9rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/*-------------------------------------------
+
+    余白
+
+	-------------------------------------------*/
+
+/*--上マージン--*/
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
+/*--下マージン--*/
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* トップに戻るボタン -----------------*/
+#back-to-top {
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: #FFF;
+    background: #F4C7C3;
+    text-align: center;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: 0;
+  }
+  #back-to-top::before {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #FFF;
+    border-width: 2px 2px 0 0;
+    transform: rotate(-45deg);
+  }
+  #back-to-top:active {
+    transform: scale(1.1);
+  }
+  #back-to-top.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  #back-to-top.is-hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* テキスト選択時の色 */
+  ::-moz-selection {
+    background: rgba(255, 240, 1, 0.8);
+    color: #777;
+  }
+  ::selection {
+    background: rgba(255, 240, 1, 0.8);
+    color: #777;
+  }
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------
+    フッター
+    -------------------------------------------*/
+#footer {
+    font-size: 1rem;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/*--------------------------------------------------------
+スマホ、タブレット用
+横幅1024pxで切り替え
+--------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .inner {
+        padding: 0 20px;
+    }
+
+    /*-------------------------------------------
+        ヘッダー
+        -------------------------------------------*/
+    #header {
+        padding: 0 10px;
+    }
+
+    /*-------------------------------------------
+        Mainvisual
+        -------------------------------------------*/
+
+
+    /*-------------------------------------------
+        INDEX
+        -------------------------------------------*/
+    #index {
+        padding: 40px 20px;
+    }
+
+    /*-------------------------------------------
+        photo
+        -------------------------------------------*/
+    /*画像を縦に並べる*/
+    .photo-list {
+        flex-direction: column;
+    }
+
+    .photo-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /*-------------------------------------------
+        DETAIL
+        -------------------------------------------*/
+    #detail {
+        padding: 40px 20px;
+    }
+
+    #detail .flex {
+        flex-direction: column;
+    }
+
+    #detail dl {
+        width: 100%;
+        border-right: none;
+        border-bottom: solid 1px #333;
+        padding-bottom: 0 0 40px 0;
+    }
+
+    #detail .detail-text {
+        width: 100%;
+        padding: 40px 0 0 0;
+    }
+
+}

@@ -1,0 +1,508 @@
+@use "mixin" as *;
+
+/* ----------------------------------------
+ベースタグ設定
+------------------------------------------- */
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+}
+
+body {
+	font-family:
+		'Noto Sans JP',
+		// 'M PLUS 2',
+		// 'Kosugi',
+		// 'Kosugi Maru',
+		// 'Kaisei Opti',
+		sans-serif;
+	font-size: 1.6rem;
+	color: $color-text;
+
+	position: relative;
+
+	// 最下部のゲーム部屋背景
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		z-index: -100;
+		display: block;
+		width: 100%;
+		height: 1152px;
+
+		background-image: url(../img/back.png);
+		background-color: rgba(255, 255, 255, 0.7);
+		background-blend-mode: lighten;
+		background-repeat: no-repeat;
+		// background-size: auto 125%;
+		background-position: center bottom -50px;
+		box-shadow: inset 0 75px 100px #FFF;
+
+		@include sp {
+			bottom: 50px;
+			background-position: center bottom;
+			background-size: auto 100%;
+			height: 806px;
+		}
+	}
+}
+
+a {
+	color: $color-text;
+	text-decoration: none;
+
+	&:focus-visible {
+		// background: #FFF001;
+		outline: 2px solid $color-text;
+		border-radius: 2px;
+	}
+}
+
+
+// h1>a:visited,
+// h2>a:visited {
+// 	color: $color-text;
+// }
+
+// // a.color-fix:visited {
+// // 	color: $color-text;
+// // }
+
+
+// a:visited:not(.color-fix) {
+// 	color: #666;
+// }
+
+
+/* トップに戻るボタン -----------------*/
+#back-to-top {
+	position: fixed;
+	bottom: 75px;
+	right: 20px;
+	$-size: 5rem;
+	width: $-size;
+	height: $-size;
+	padding: .5rem;
+	border-radius: 50%;
+	// border: 1px solid $color-orange;
+	background: #FFF;
+	background: $color-base;
+	// color: $color-orange;
+	// font-size: 1.2rem;
+	// font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+
+	&::before {
+		content: "";
+		display: block;
+		margin: .5rem auto 0;
+		$-size: 1.2rem;
+		width: $-size;
+		height: $-size;
+		// border: 2px solid $color-orange;
+		border: 2px solid #FFF;
+		border-width: 2px 2px 0 0;
+		transform: rotate(-45deg);
+	}
+
+	&:active {
+		transform: scale(1.1);
+	}
+
+	// アニメ設定
+	transition: opacity .5s,
+	visibility .5s;
+	opacity: 0;
+	visibility: 0;
+
+	&.is-show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.is-hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/* テキスト選択時の色 */
+::selection {
+	background: rgba(255, 240, 1, .8);
+	color: #777;
+}
+
+
+/*------------------------------------------------------------
+
+* 共通スタイル -----------------------------------------------
+
+------------------------------------------------------------*/
+
+/*-------------------------------------------
+
+ベース
+
+-------------------------------------------*/
+
+/*--コンテナー
+	中央寄せ・左右パディング50px--*/
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/*--ラッパー
+	（上マージン+カラムギャップ）--*/
+.wrapper {
+	margin-top: 200px;
+	column-gap: 20px;
+}
+
+/*--サブコンテンツ
+	（下マージン+カラムギャップ）--*/
+.sub-content {
+	margin-bottom: 80px;
+	column-gap: 20px;
+}
+
+@include sp {
+
+	/*--コンテナー
+    中央寄せ・左右パディング50px--*/
+	.container {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+	/*--ラッパー
+    （上マージン+カラムギャップ）--*/
+	.wrapper {
+		margin-bottom: 25px;
+		padding-left: pxvw(10, 375);
+		padding-right: pxvw(10, 375);
+	}
+}
+
+
+/*-------------------------------------------
+
+        見出し
+
+        -------------------------------------------*/
+.site-title {
+	width: 120px;
+	line-height: 0px;
+}
+
+.site-title a {
+	display: block;
+}
+
+.headline {
+	font-family: $font-round;
+	font-size: 3rem;
+	margin-bottom: 100px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::before,
+	&::after {
+		content: "";
+		background: $color-vividpink;
+		display: block;
+		width: 75px;
+		height: 3px;
+		border-radius: 1.5px;
+		margin: 0 .8em;
+	}
+}
+
+.sub-title {
+	// font-family: $font-round;
+	font-weight: bold;
+	font-size: 2rem;
+	padding-left: 12px;
+	margin-bottom: 15px;
+}
+
+.sub-title2 {
+	font-family: $font-round;
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.toc {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.section-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+@include sp {
+	.headline {
+		font-family: $font-round;
+		font-size: 3rem;
+		margin-bottom: 100px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&::before,
+		&::after {
+			content: "";
+			background: $color-vividpink;
+			display: block;
+			width: 30px;
+			height: 3px;
+			border-radius: 1.5px;
+			margin: 0 .8em;
+		}
+	}
+}
+
+
+
+/*-------------------------------------------
+
+	コンテンツボックス
+
+	（中コンテンツ用）
+
+	-------------------------------------------*/
+
+.box1 {
+	/*--大余白付きボックス--*/
+	line-height: 1.5em;
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	margin-top: 5px;
+}
+
+.box2 {
+	/*--中余白付きボックス--*/
+	padding: 10px;
+}
+
+.box3 {
+	/*--中余白付きボックス--*/
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+@include sp {
+
+	.box1 {
+		/*--大余白付きボックス--*/
+		line-height: 1.5em;
+
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		margin-top: 5px;
+	}
+
+	/*--Flexコンテンツ用
+        横幅指定のみ箱--*/
+	.box2 {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+
+/*--Flexコンテンツ用
+            横幅指定のみ箱--*/
+.box100 {
+	/*-- 横100%(一列に1つ--*/
+	width: 100%;
+}
+
+.box50 {
+	/*--横50%(一列に2つ) --*/
+	width: 50%;
+}
+
+.box55 {
+	width: 55%;
+}
+
+.box33 {
+	/*---横33%(一列に3つ)--*/
+	width: 33%;
+}
+
+
+/*-------------------------------------------
+
+        表示スタイル
+
+    -------------------------------------------*/
+
+/*--フレックス--*/
+.flex {
+	/*--PC時もスマホ時も横並び--*/
+	display: flex;
+}
+
+.flex-PC {
+	/*--PC時のみ横並びになる--*/
+	display: flex;
+}
+
+.wrap-flex {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.wrap {
+	/*--Flexで折り返しさせる--*/
+	flex-wrap: wrap;
+}
+
+.text {
+	line-height: 1.6em;
+}
+
+@include sp {
+
+	/*--フレックス--*/
+	.flex-PC {
+		flex-direction: column;
+		flex-wrap: wrap;
+		// #profile & {
+		//     display: initial;
+		// }
+	}
+
+	.flex-phone {
+		/*--スマホ時のみ横並びになる--*/
+		display: flex;
+	}
+}
+
+
+/*--------------------------
+
+			画像
+
+	---------------------------*/
+
+.logo {
+	max-width: 50vw;
+	width: 100%;
+}
+
+.logo-small {
+	width: 120px;
+}
+
+.svg-icon {
+	width: 1.8rem;
+	margin-right: 1.1rem;
+	vertical-align: middle;
+}
+
+.svg-icon2 {
+	width: 1.8rem;
+	margin-right: 0.2rem;
+	vertical-align: middle;
+}
+
+
+.svg-icon3 {
+	width: 2.5rem;
+	min-width: 2.5rem;
+	vertical-align: middle;
+}
+
+.svg-h-icon {
+	width: 2.5rem;
+	min-width: 1.9rem;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+@include sp {
+	.logo {
+		max-width: 100%;
+	}
+
+}
+
+
+
+
+.background-img {
+	// 背景を見せるためのスペーサー
+	width: 100%;
+	height: 100vh;
+
+	@include sp {
+		height: 100vh;
+	}
+
+	position: relative;
+
+	// パートナーイメージ
+	&::before {
+		content: "";
+
+		background: {
+			image: url("/img/gogococcokikko.png");
+			position: right 30px top;
+			// position: right -50px top;
+			size: contain;
+			repeat: no-repeat;
+		}
+
+		position: relative;
+		top: -270px;
+		left: 0;
+		display: block;
+		width: 100%;
+
+		pointer-events: none;
+
+		@include pc {
+			min-width: 300px;
+			min-height: 300px;
+		}
+
+		@include mq(1440) {
+			background-position: right top;
+			max-width: 1300px;
+			margin: auto;
+		}
+
+		@include mq(840, max) {
+			top: -300px;
+		}
+
+		@include sp {
+			min-width: 300px;
+			min-height: 300px;
+			top: -110px;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*** The new CSS reset - version 1.5.1 (last updated 1.3.2022) ***/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+
+/*-------------------------------------------
+
+	小説スタイル
+
+	-------------------------------------------*/
+.airzoshi {
+  width: 100%;
+  height: 100vh;
+}
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .copy {
+    font-size: 0.8rem;
+  }
+
+  .story-space {
+    border: none;
+      margin: 100px;
+  }

@@ -1,0 +1,32 @@
+@use "mixin" as *;
+
+/*-------------------------------------------
+共通フッター
+-------------------------------------------*/
+
+// 共通するスタイル
+#footer {
+	background-color: #f4c7c3;
+	font-family: $font-round;
+	font-size: 1.4rem;
+
+	// SP: フッター -------------------------
+	@include sp {
+		height: 100px;
+		padding: 0;
+		font-size: 1.4rem;
+		text-align: center;
+		.list-link {
+			justify-content: center;
+			padding: 0;
+		}
+	}
+
+	// PC:フッター --------------------------
+	@include pc {
+		justify-content: space-between;
+		height: 60px;
+		padding: 20px 30px;
+	}
+
+}

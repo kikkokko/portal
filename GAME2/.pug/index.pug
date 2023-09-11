@@ -1,0 +1,102 @@
+//- データベースの読み込み
+include includes/_database.pug
+
+//- ゲーム項目の共通HTML構造
+mixin gameItem(dataname)
+	each g in dataname
+		if g.platform == "PSアーカイブス"
+			- let hard = "PS_archive"
+		if g.platform == "フリーゲーム"
+			- let hard = "Free"
+		if g.platform == "その他"
+			- let hard = "Else"
+		li.target(data-category=hard)
+			a(href=local+g.id+"/")
+				img(src=local+g.id+"/package.jpg")
+				h3.game-title= g.title
+					if g.sub !== undefined
+						| &nbsp;
+						span= g.sub
+			p.series
+				if g.series !== undefined
+					a(href=local+g.series+"シリーズ/")= g.series+"シリーズ"
+			p.tag
+				a(href="#"+g.platform+"/")= g.platform
+				if g.stream == true
+					a(href="#配信あり") 配信あり
+				if g.stream == false
+					a(href="#未配信") 未配信
+				if g.status == "ED未コンプ"
+					a(href="#クリア") クリア
+				a(href="+"+g.status)= g.status
+
+
+doctype html
+html(lang="ja")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		title= サイト名
+		meta(name="description", content="きっこのゲームまとめ")
+		meta(name="format-detection", content="telephone=no")
+
+		// favicon/webclipicon
+		link(rel="icon", href=local+"img/favicon.ico")
+		//- link(rel="icon", href="favicon.svg", type="image/svg+xml")
+		//- link(rel="apple-touch-icon", href="webclip.png")
+
+		// ogp
+		meta(property="og:site_name", content=サイト名)
+		meta(property="og:url", content="https://kikko.pages.dev/game/")
+		meta(property="og:type", content="website")
+		meta(property="og:title", content=サイト名)
+		meta(property="og:description", content=説明)
+		meta(property="og:image", content=OGPイメージ)
+		meta(property="og:locale", content="ja_JP")
+		//- meta(property="fb:app_id", content="AppID")
+		meta(name="twitter:card", content="summary_large_image")
+		//- meta(name="twitter:site", content="@account")
+		meta(name="twitter:description", content=説明)
+		meta(name="twitter:image:src", content=OGPイメージ)
+
+		// css
+		link(rel="stylesheet", href="https://unpkg.com/ress/dist/ress.min.css")
+		link(rel="stylesheet", href=local+"css/style.css")
+
+		// js
+		script(src=local+"js/script.js", defer)
+
+	//--------------------------------------------------------------
+
+	body
+		header#header.wrapper
+			include includes/_header.pug
+
+		main
+			nav#list-menu.menu.mt50.mb50
+				ul
+					li: a(href="#now") プレイ進行中のゲーム
+					li: a(href="#gamelist") ゲーム一覧
+					li: a(href="#else") その他ゲーム一覧
+					li: a(href="#free") フリーゲーム一覧
+
+
+			#list.wide-wrapper
+				// contents 現在プレイ中
+				section#now.mb60
+					h2.section-title 現在プレイ進行中
+					ul.game-list
+						+gameItem(nowgame)
+
+				// 全てのゲームリスト
+				.targets: section#sort.game-soft
+					ul#list.game-list
+						+gameItem(allgame)
+
+
+
+
+		footer(id="footer")
+			include includes/_footer.pug
+
+		script(src="")

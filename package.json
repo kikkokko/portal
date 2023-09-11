@@ -1,0 +1,15 @@
+{
+  "name": "kikko-portal",
+  "version": "1.0.0",
+  "description": "きっこっこ* - ポータルサイト",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug ./.pug --hierarchy -o ./GAME2 -P -w"
+  },
+  "keywords": [],
+  "author": "kikko",
+  "license": "ISC",
+  "devDependencies": {
+    "pug-cli": "github:pugjs/pug-cli#master"
+  }
+}

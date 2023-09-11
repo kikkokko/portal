@@ -1,0 +1,268 @@
+@use "mixin" as *;
+:root {
+	--color-text: #222;
+	--color-base: #f4c7c3;
+	--color-pale: #ffefee;
+	--color-yellow: #fff001;
+	--color-pink: #ffb9d1;
+	--color-orange: #ffbb37;
+	--color-skin: #ffefd2;
+}
+@font-face {
+	font-family: "CorpRoundKai";
+	src: url("../font/corp-round-kai.woff2") format("woff2");
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Noto Sans JP", "M Plus 2", sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: var(--color-text);
+	margin: 0;
+}
+img, svg {
+	display: block;
+	max-width: 100%;
+}
+a {
+	color: var(--color-text);
+}
+p {
+	margin: 0 0 1em;
+}
+
+dl {
+	margin: 1em;
+}
+dt {
+	float: left;
+	font-weight: bold;
+	margin-right: 0.5em;
+}
+dd, li {
+	margin: 0 0 0.5em;
+}
+ul[class] {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		margin: 0;
+	}
+}
+
+summary {
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 2em 1em;
+}
+th, td {
+	border: 1px solid #ddd;
+	padding: 0.25em 0.5em;
+}
+th {
+	background-color: var(--color-pale);
+}
+::selection {
+	background: rgba(255, 240, 1, 0.8);
+	color: #777;
+}
+
+
+
+/* ヘッダー
+-------------------------------------------------------------*/
+header {
+	background: #FFF;
+}
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1280px;
+	padding: 0 32px;
+	margin: auto;
+}
+h1 {
+	width: 45%;
+	margin: 0;
+	img {
+		max-height: 8rem;
+		margin: auto;
+	}
+}
+#global-nav {
+	font-size: 2rem;
+	font-family: "CorpRoundKai";
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 0 1em;
+	}
+	li {
+		flex-shrink: 0;
+		margin: 0;
+	}
+	a {
+		position: relative;
+		z-index: 0;
+		text-decoration: none;
+		/* ナビ ホバー時「＊」がまわる */
+		&::before {
+			content: "*";
+			color: var(--color-orange);
+			font-size: 150%;
+			position: absolute;
+			z-index: -1;
+			top: -0.7rem;
+			right: -0.7rem;
+			transform-origin: center 33%;
+			transition: transform 1s, opacity 0.5s;
+			opacity: 0;
+		}
+		&:hover::before {
+			opacity: 1;
+			transform: rotate(360deg);
+		}
+	}
+}
+
+// フッター
+// ------------------------------------------------------------
+footer {
+	margin-top: 7.5em;
+	background: var(--color-base);
+	font-family: "CorpRoundKai", sans-serif;
+	text-align: center;
+	small, ul {
+		font-size: 1.4rem;
+	}
+}
+.footer-inner {
+	padding: .5rem 1em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	img {
+		max-height: 2.5rem;
+	}
+}
+.footer-link {
+	display: flex;
+	gap: .75em;
+}
+
+
+
+/* ページタイトル -------------------------*/
+main h2:first-of-type {
+	min-height: 5em;
+	padding: 0.5em 0;
+	font-size: 5rem;
+	text-align: center;
+	background-color: rgb(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h3, h4, h5, h6 {
+	margin: 1em 0 0.25em;
+	section &:first-of-type {
+		margin: 0 0 0.25em;
+	}
+}
+h3 {
+	font-size: 3rem;
+}
+h4 {
+	font-size: 2.5rem;
+}
+
+/* 共通ラッパー
+-------------------------------------------------------------*/
+section {
+	padding: 0 30px;
+	max-width: 1280px;
+	margin: 5em auto;
+}
+
+/* 汎用クラス一覧
+------------------------------------------------------------*/
+
+/* 2カラム */
+.column-2 {
+	display: flex;
+	& > * {
+		padding: 1em;
+		// width: 50%;
+	}
+}
+
+/* 大量のAだけなリスト */
+.a-list {
+	a {
+		margin-right: 0.75em;
+		// background: #eee;
+	}
+}
+
+/* 見出し目次
+-------------------------------------------------------------*/
+#pagelink {
+	position: sticky;
+	top: 0;
+}
+.js-toc {
+	// details
+	margin-left: auto;
+	top: 1rem;
+	padding: 1.5rem;
+	width: fit-content;
+	background-color: rgba($color: #fff, $alpha: 0.9);
+	font-weight: bold;
+	summary {
+		font-size: 1.8rem;
+		line-height: 1;
+		text-align: right;
+		list-style: none;
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&::after {
+			content: url("../img/toc.svg");
+			margin: 0 0.2rem;
+			vertical-align: text-bottom;
+		}
+	}
+}
+
+
+
+// ------------------------------------------------------------
+// indexページ用
+// ------------------------------------------------------------
+
+.game-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	a {
+		display: block;
+		background: var(--color-skin);
+	}
+}

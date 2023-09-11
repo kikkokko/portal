@@ -1,0 +1,235 @@
+@use "mixin" as *;
+//
+// 主にJSでコントロールする箇所のスタイル
+//
+
+$btn-size: 4vmin;
+$btn-min-size: 25px;
+$btn-weight: 2px;
+
+
+// ------------------------------------------------------------
+// MicroModal.js用
+// ------------------------------------------------------------
+.micromodal {
+	&-overlay,
+	&-wrapper {
+		transition: opacity .3s, visibility .3s;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+	&-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		background: rgba($color: #000, $alpha: .7);
+		backdrop-filter: blur(3px);
+	}
+	&-wrapper {
+		text-align: center;
+		color: #FFF;
+		max-height: 100vh;
+	}
+	&-title {
+		visibility: hidden;
+		display: inline-block;
+		height: 10vh;
+		font-weight: lighter;
+		font-size: 3.5rem;
+	}
+	&-content {
+		max-width: 80%;
+		width: fit-content;
+		margin: auto;
+	}
+
+	// X 閉じるボタン ------------------------
+	&-close-button {
+		position: fixed;
+		top: 20px;
+		right: 3%;
+		$close-size: 45px;
+		width: 45px;
+		height: $close-size;
+		&::before,&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: $close-size;
+			height: $btn-weight;
+			border-radius: $btn-weight;
+			background: #FFF;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+		&:focus-visible {
+			background: #777;
+		}
+	}
+
+	button:focus-visible {
+		background: rgba($color: 	#FFF001, $alpha: .7);
+	}
+}
+
+#modal-1{
+	// アートエリア
+	// ----------------------------------------
+	&__img-area {
+		img {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			max-width: 80vw;
+			max-height: 80vh;
+			object-fit: contain;
+			opacity: 0;
+			visibility: hidden;
+		}
+		img.is-hide {
+			animation: imgHide .5s forwards;
+			z-index: initial;
+		}
+		img.is-show {
+			animation: imgShow .5s forwards;
+			z-index: 100;
+		}
+	}
+	@keyframes imgHide {
+		0% {opacity: 1;visibility: visible;}
+		99% {opacity: 0;visibility: hidden;}
+		100%{display: none;}
+	}
+	@keyframes imgShow {
+		0% {display: block;}
+		1% {opacity: 0; visibility: hidden;}
+		100% {opacity: 1; visibility: visible;}
+	}
+
+	// prev nextボタン
+	// ---------------------------------------
+
+	&__prev, &__next {
+		position: fixed;
+		top: 45%;
+		z-index: 50;
+		padding: 10px;
+		// background: #000;
+		&::before {
+			content: "";
+			display: block;
+			width: $btn-size;
+			height: $btn-size;
+			min-width: $btn-min-size;
+			min-height: $btn-min-size;
+			border: 2px solid #FFF;
+			// border: $btn-size solid transparent;
+		}
+	}
+	&__prev{
+		left: 2%;
+		padding-right: 0;
+		&::before {
+			border-width: 2px 2px 0 0;
+			transform: rotate(-135deg);
+			// border-right: $btn-size solid #FFF;
+			// border-left: none;
+		}
+	}
+	&__next{
+		right: 2%;
+		padding-left: 0;
+		&::before {
+			border-width: 2px 2px 0 0;
+			transform: rotate(45deg);
+			// border-left: $btn-size solid #FFF;
+			// border-right: none;
+		}
+	}
+	&__dot {
+		position: fixed;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		button {
+			border: none;
+			outline: none;
+			appearance: none;
+			margin: 1%;
+			&::before {
+				content: "";
+				display: block;
+				$size: 8px;
+				width: $size;
+				height: $size;
+				border-radius: 50%;
+				margin: 5px;
+				transition: background .3s;
+				background: #888;
+				@include sp {
+					$size: 5px;
+					width: $size;
+					height: $size;
+				}
+			}
+			// cursor: pointer;
+			&.is-active::before {
+				background: #FFF;
+			}
+		}
+	}
+}
+
+
+#js_artwork-link {
+	position: relative;
+	cursor: pointer;
+	// モーダルアイコン
+	&::before, &::after {
+		position: absolute;
+		z-index: 1;
+		bottom: 2rem;
+		right: 2rem;
+		display: block;
+		width: 32px;
+		height: 24px;
+		pointer-events: none;
+		content: "";
+	}
+	&::before {
+		border: 3px solid #FFF;
+		box-shadow: 0 0 10px #000;
+	}
+	&::after {
+		border-left: 3px solid #FFF;
+		border-top: 3px solid #FFF;
+		transform: translate(-6px,-6px);
+	}
+	& button:focus-visible {
+		outline: 2px solid #000;
+	}
+}
+
+
+// モーダルが開いたとき
+.micromodal.is-open {
+	.micromodal-overlay,
+	.micromodal-wrapper {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+	}
+}

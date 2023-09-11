@@ -1,0 +1,1109 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きっこのゲーム手帖*</title>
+    <link rel="shortcut icon" href="/game/img/favicon.ico">
+    <link rel="alternate" hreflang="ja" href="https://kikko.pages.dev/">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Googleフォント候補
+        family=Kosugi&
+        Kosugi+Maru&
+        family=Sawarabi+Gothic&
+        family=M+PLUS+2:wght@400;700&
+        family=M+PLUS+Rounded+1c:wght@400;700&
+        family=Kaisei+Opti:wght@400;700&
+    -->
+
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/game/css/style.css">
+
+    <script>
+        console.log("きっこのゲーム手帖");
+    </script>
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="きっこのゲーム手帖*" />
+    <meta property="og:url" content="https://kikko.pages.dev/game/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="きっこのゲーム手帖-エコーナイト2-" />
+    <meta property="og:description" content="柚木桔子のポータルサイト" />
+    <meta property="og:image" content="https://kikko.pages.dev/game/img/twittercard.jpg" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- <meta property="fb:app_id" content="AppID"> -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- <meta name="twitter:site" content="@moshamusha2010" /> -->
+    <meta name="twitter:description" content="きっこのゲームまとめ" />
+    <meta name="twitter:image:src" content="https://kikko.pages.dev/game/img/twittercard.jpg" />
+
+</head>
+
+
+<body>
+
+    <!-- ヘッダー -->
+    <header id="header" class="wrapper">
+        <h1 class="site-title">
+            <a href="/game/"><img src="/game/img/logo.svg" alt="きっこのゲーム手帖"></a>
+        </h1>
+        <nav id="navi" class="">
+            <ul class="">
+                <li><a href="/game/">ゲームリスト</a></li>
+                <li><a href="/game/about.html">配信について</a></li>
+                <li><a href="https://www.youtube.com/@coccokikko">Youtube</a></li>
+                <li><a href="/">きっこっこ*</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- メイン -->
+    <main>
+        <nav id="list-menu" class="menu mt50 mb50">
+            <ul>
+                <li><a href="#now">プレイ進行中のゲーム</a></li>
+                <li><a href="#gamelist">ゲーム一覧</a></li>
+                <li><a href="#else">その他ゲーム一覧</a></li>
+                <li><a href="#free">フリーゲーム一覧</a></li>
+            </ul>
+        </nav>
+
+
+
+        <div id="list" class="wide-wrapper">
+            <!-- contents 現在プレイ中 -->
+            <section id="now" class="mb60">
+
+                <h2 class="section-title">現在プレイ進行中</h2>
+
+
+                <ul class="game-list">
+                    <li class="target" data-category="Steam On Playing">
+                        <a href="/game/stardew-valley/">
+                            <img src="/game/stardew-valley/package.png" alt="">
+                            <h3 class="game-title">Stardew Valley</h3>
+                        </a>
+                        <p class="series"></p>
+                        <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり" class="haishin-tag">配信あり</a><a href="/game/#プレイ中">プレイ中</a></p>
+                    </li>
+
+                    <li class="target" data-category="PS On Playing">
+                        <a href="/game/vagrant-story/">
+                            <img src="/game/vagrant-story/package.jpg" alt="">
+                            <h3 class="game-title">ベイグラントストーリー</h3>
+                        </a>
+                        <p class="series"></p>
+                        <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="/game/#プレイ中">プレイ中</a></p>
+                    </li>
+
+                    <li class="target" data-category="PS On Playing">
+                        <a href="/game/echo-night/">
+                            <img src="/game/echo-night/package.jpg" alt="">
+                            <h3 class="game-title">ECHO NIGHT</h3>
+                        </a>
+                        <p class="series">ECHO NIGHTシリーズ</p>
+                        <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="/game/#プレイ中">プレイ中</a></p>
+                    </li>
+                </ul>
+            </section>
+            <!-- contents 現在プレイ中終わり -->
+
+
+            <!-- contents ゲーム一覧 -->
+            <div id="gamelist" class="filters">
+
+                <h2 class="section-title">ゲーム一覧</h2>
+
+                <!-- フィルタ（ラジオボタン） -->
+                <input type="radio" name="categories" id="Default" value="Default" checked><!--配信ありとなし-->
+                <input type="radio" name="categories" id="Non" value="Non"><!--未プレイ-->
+                <input type="radio" name="categories" id="All" value="All"><!--すべて-->
+
+                <input type="radio" name="categories" id="On" value="On"><!--配信あり-->
+                <input type="radio" name="categories" id="Off" value="Off"><!--配信なし-->
+
+                <input type="radio" name="categories" id="Now" value="Now"><!--今やってる（更新中）-->
+                <input type="radio" name="categories" id="Playing" value="Playing"><!--継続中-->
+                <input type="radio" name="categories" id="Clear" value="Clear"><!--クリア済-->
+                <input type="radio" name="categories" id="Part" value="Part"><!--クリア済でEDは未コンプ。クリア済なのでクリアカテゴリに入っている-->
+                <input type="radio" name="categories" id="Stop" value="Stop"><!--停止中/やる気がない-->
+                <input type="radio" name="categories" id="Nothing" value="Nothing"><!--クリアの概念がない-->
+                <input type="radio" name="categories" id="Dont" value="Dont"><!--クリア未達成-->
+
+                <input type="radio" name="categories" id="SFC" value="SFC"><!--スーファミ-->
+                <input type="radio" name="categories" id="PS" value="PS"><!--PS-->
+                <input type="radio" name="categories" id="PS_archive" value="PS_archive"><!--PSアーカイブス-->
+                <input type="radio" name="categories" id="PS2" value="PS2"><!--PS2-->
+                <input type="radio" name="categories" id="DS" value="DS"><!--DSと3DS-->
+                <input type="radio" name="categories" id="Steam" value="Steam"><!--Steamにある-->
+                <input type="radio" name="categories" id="Else" value="Else"><!--その他プラットフォーム-->
+                <input type="radio" name="categories" id="Free" value="Free"><!--フリーゲーム-->
+
+                <!-- フィルタ（ラベル） -->
+
+                <dl class="label">
+                    <dt><img src="/game/img/svg/bx-joystick.svg" class="svg-icon-label"></dt>
+                    <dd>
+                        <ol>
+                            <li><label for="Default" class="checked">プレイゲーム一覧</label></li>
+                            <li><label for="Non">未プレイゲーム</label></li>
+                            <li><label for="All">全てのゲーム</label></li>
+                        </ol>
+                    </dd>
+                    <dt><img src="/game/img/svg/bx-tv.svg" class="svg-icon-label"></dt>
+                    <dd>
+                        <ol>
+                            <li><label for="On">配信あり</label></li>
+                            <li><label for="Off">配信なし</label></li>
+
+                        </ol>
+                    </dd>
+                    <dt><img src="/game/img/svg/bx-star.svg" class="svg-icon-label"></dt>
+                    <dd>
+                        <ol>
+                            <li><label for="Now">現在プレイ中</label></li>
+                            <li><label for="Playing">継続中</label></li>
+                            <li><label for="Clear">クリア済</label></li>
+                            <li><label for="Part">ED未コンプ</label></li>
+                            <li><label for="Stop">停止中</label></li>
+                            <li><label for="Nothing">クリア条件なし</label></li>
+                        </ol>
+                    </dd>
+                    <dt><img src="/game/img/svg/bx-purchase-tag-alt.svg" class="svg-icon-label"></dt>
+                    <dd>
+                        <ol>
+                            <li><label for="PS">PS</label></li>
+                            <li><label for="PS_archive">PSアーカイブス</label></li>
+                            <li><label for="PS2">PS2 </label></li>
+                            <li><label for="PSP">PSP</label></li>
+                            <li><label for="DS">DS・3DS</label></li>
+                            <li><label for="SFC">スーファミ</label></li>
+                            <li><label for="Else">その他</label></li>
+                            <!-- <li><label for="Steam">Steam</label></li> -->
+                            <li><label for="Free">フリーゲーム</label></li>
+                        </ol>
+                    </dd>
+                </dl>
+
+
+
+                <!-- フィルタリングする対象のコンテンツ -->
+                <div class="targets">
+
+                    <section id="soft" class="game-soft">
+                        <ul class="game-list">
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/arc-the-lad/">
+                                    <img src="/game/arc-the-lad/package.jpg" alt="">
+                                    <h3 class="game-title">アークザラッド</h3>
+                                </a>
+                                <p class="series">アークザラッドシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/arc-the-lad2/">
+                                    <img src="/game/arc-the-lad2/package.jpg" alt="">
+                                    <h3 class="game-title">アークザラッドⅡ</h3>
+                                </a>
+                                <p class="series">アークザラッドシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/arc-the-lad3/">
+                                    <img src="/game/arc-the-lad3/package.jpg" alt="">
+                                    <h3 class="game-title">アークザラッドⅢ</h3>
+                                </a>
+                                <p class="series">アークザラッドシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear Part">
+                                <a href="/game/r4/">
+                                    <img src="/game/r4/package.jpg" alt="">
+                                    <h3 class="game-title">R4<span>RIDGE RACER TYPE 4</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Clear">
+                                <a href="/game/avaloncode/">
+                                    <img src="/game/avaloncode/package.jpg" alt="">
+                                    <h3 class="game-title">アヴァロンコード</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Stop">
+                                <a href="/game/archaic-sealed-heat/">
+                                    <img src="/game/archaic-sealed-heat/package.jpg" alt="">
+                                    <h3 class="game-title">アルカイックシールドヒート</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Off Clear Part">
+                                <a href="/game/atlier-marie/">
+                                    <img src="/game/atlier-marie/package.jpg" alt="">
+                                    <h3 class="game-title">マリーのアトリエ プラス</h3>
+                                </a>
+                                <p class="series">アトリエシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Off Clear Part">
+                                <a href="/game/atlier-elie/">
+                                    <img src="/game/atlier-elie/package.jpg" alt="">
+                                    <h3 class="game-title">エリーのアトリエ</h3>
+                                </a>
+                                <p class="series">アトリエシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS2 Off Clear Part">
+                                <a href="/game/atlier-lilie">
+                                    <img src="/game/atlier-lilie/package.jpg" alt="">
+                                    <h3 class="game-title">リリーのアトリエ</h3>
+                                </a>
+                                <p class="series">アトリエシリーズ</p>
+                                <p class="tag"><a href="#PS2">PS2</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/alundra/">
+                                    <img src="/game/alundra/package.jpg" alt="">
+                                    <h3 class="game-title">アランドラ</h3>
+                                </a>
+                                <p class="series">アランドラシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Stop Playing">
+                                <a href="/game/item7.html">
+                                    <img src="/game/alundra2/package.jpg" alt="">
+                                    <h3 class="game-title">アランドラ2<span>魔進化の謎</span></h3>
+                                </a>
+                                <p class="series">アランドラシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/inazuma-eleven/">
+                                    <img src="/game/inazuma-eleven/package.jpg" alt="">
+                                    <h3 class="game-title">イナズマイレブン</h3>
+                                </a>
+                                <p class="series">イナズマイレブンシリーズ</p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Non">
+                                <a href="/game/inazuma-eleven2/">
+                                    <img src="/game/inazuma-eleven2/package.jpg" alt="">
+                                    <h3 class="game-title">イナズマイレブン2<span>脅威の侵略者・ファイア</span></h3>
+                                </a>
+                                <p class="series">イナズマイレブンシリーズ</p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Non">
+                                <a href="/game/inazuma-eleven3/">
+                                    <img src="/game/inazuma-eleven3/package.jpg" alt="">
+                                    <h3 class="game-title">イナズマイレブン3<span>世界への挑戦!! ボンバー</span></h3>
+                                </a>
+                                <p class="series">イナズマイレブンシリーズ</p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Clear Part">
+                                <a href="/game/weltorv-estleia.html">
+                                    <img src="/game/weltorv-estleia/package.jpg" alt="">
+                                    <h3 class="game-title">ウェルトオブイストリア</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Playing">
+                                <a href="/game/echo-night/">
+                                    <img src="/game/echo-night/package.jpg" alt="">
+                                    <h3 class="game-title">ECHO NIGHT</h3>
+                                </a>
+                                <p class="series">ECHO NIGHTシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="/game/#プレイ中">プレイ中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Playing Clear Part">
+                                <a href="/game/echo-night2/">
+                                    <img src="/game/echo-night2/package.jpg" alt="">
+                                    <h3 class="game-title">ECHO NIGHT#2<span>眠りの支配者</span></h3>
+                                </a>
+                                <p class="series">ECHO NIGHTシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a><a href="/game/#プレイ中">プレイ中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Clear">
+                                <a href="/game/orenoshikabanewo-koeteyuke/">
+                                    <img src="/game/orenoshikabanewo-koeteyuke/package.jpg" alt="">
+                                    <h3 class="game-title">俺の屍を越えてゆけ</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Clear">
+                                <a href="/game/gaist-crusher/">
+                                    <img src="/game/gaist-crusher/package.jpg" alt="">
+                                    <h3 class="game-title">ガイストクラッシャー</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/Klonoa/">
+                                    <img src="/game/Klonoa/package.jpg" alt="">
+                                    <h3 class="game-title">風のクロノア<span>door to phantomile</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/kindaichi/">
+                                    <img src="/game/kindaichi/package.jpg" alt="">
+                                    <h3 class="game-title">金田一少年の事件簿<span>悲報島 新たなる惨劇</span></h3>
+                                </a>
+                                <p class="series">金田一少年の事件簿シリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/kindaichi2/">
+                                    <img src="/game/kindaichi2/package.jpg" alt="">
+                                    <h3 class="game-title">金田一少年の事件簿2<span>地獄遊園殺人事件</span></h3>
+                                </a>
+                                <p class="series">金田一少年の事件簿シリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/kindaichi3/">
+                                    <img src="/game/kindaichi3/package.jpg" alt="">
+                                    <h3 class="game-title">金田一少年の事件簿3<span>青龍伝説殺人事件</span></h3>
+                                </a>
+                                <p class="series">金田一少年の事件簿シリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/kuroihitomino-noa/">
+                                    <img src="/game/kuroihitomino-noa/package.jpg" alt="">
+                                    <h3 class="game-title">黒い瞳のノア</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/cross/">
+                                    <img src="/game/cross/package.jpg" alt="">
+                                    <h3 class="game-title">クロス探偵物語</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear Part">
+                                <a href="/game/gensou-suikoden/">
+                                    <img src="/game/gensou-suikoden/package.png" alt="">
+                                    <h3 class="game-title">幻想水滸伝</h3>
+                                </a>
+                                <p class="series">幻想水滸伝シリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear Part">
+                                <a href="/game/gensou-suikoden2/">
+                                    <img src="/game/gensou-suikoden2/package.png" alt="">
+                                    <h3 class="game-title">幻想水滸伝2</h3>
+                                </a>
+                                <p class="series">幻想水滸伝シリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Off Clear Part">
+                                <a href="/game/gumparade-march/">
+                                    <img src="/game/gumparade-march/package.png" alt="">
+                                    <h3 class="game-title">高機動幻想ガンパレード・マーチ</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/saga-frontier/">
+                                    <img src="/game/saga-frontier/package.jpg" alt="">
+                                    <h3 class="game-title">サガフロンティア</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP On Clear Part">
+                                <a href="/game/sakura-taisen/">
+                                    <img src="/game/sakura-taisen/package.jpg" alt="">
+                                    <h3 class="game-title">サクラ大戦1&2</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/the-book-of-watermarks/">
+                                    <img src="/game/the-book-of-watermarks/package.jpg" alt="">
+                                    <h3 class="game-title">THE BOOK OF WATERMARKS</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a></p>
+                            </li>
+                            <li class="target" data-category="PSP On Clear Part">
+                                <a href="/game/zill-oll/">
+                                    <img src="/game/zill-oll/package.jpg" alt="">
+                                    <h3 class="game-title">Zill O'll<span>infinite plus</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Off Stop">
+                                <a href="/game/jumping-flash/">
+                                    <img src="/game/jumping-flash/package.jpg" alt="">
+                                    <h3 class="game-title">ジャンピングフラッシュ</h3>
+                                </a>
+                                <p class="series">ジャンピングフラッシュシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信なし">配信なし</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/jumping-flash2/">
+                                    <img src="/game/jumping-flash2/package.jpg" alt="">
+                                    <h3 class="game-title">ジャンピングフラッシュ2<span>アロハ男爵大弱りの巻</span></h3>
+                                </a>
+                                <p class="series">ジャンピングフラッシュシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="SFC On Stop">
+                                <a href="/game/super-mario-world/">
+                                    <img src="/game/super-mario-world/package.jpg" alt="">
+                                    <h3 class="game-title">スーパーマリオワールド</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#スーファミ">スーファミ</a><a href="#配信あり">配信あり</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/xenogears/">
+                                    <img src="/game/xenogears/package.jpg" alt="">
+                                    <h3 class="game-title">ゼノギアス</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP Non">
+                                <a href="/game/senritsuno-sutoratasu/">
+                                    <img src="/game/senritsuno-sutoratasu/package.jpg" alt="">
+                                    <h3 class="game-title">戦慄のストラタス</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/sokaigi/">
+                                    <img src="/game/sokaigi/package.jpg" alt="">
+                                    <h3 class="game-title">双界儀</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP Stop">
+                                <a href="/game/taikou-risshiden5/">
+                                    <img src="/game/taikou-risshiden5/package.jpg" alt="">
+                                    <h3 class="game-title">太閤立志伝Ⅴ</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#配信なし">配信なし</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/tamamayu-monogatari/">
+                                    <img src="/game/tamamayu-monogatari/package.jpg" alt="">
+                                    <h3 class="game-title">玉繭物語</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Off Clear Part">
+                                <a href="/game/danjon-syoutenkai/">
+                                    <img src="/game/danjon-syoutenkai/package.jpg" alt="">
+                                    <h3 class="game-title">だんじょん商店会<span>伝説の剣はじめました</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP On Clear">
+                                <a href="/game/danball-senki/">
+                                    <img src="/game/danball-senki/package.jpg" alt="">
+                                    <h3 class="game-title">ダンボール戦機</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP Non">
+                                <a href="/game/danball-senki-w/">
+                                    <img src="/game/danball-senki-w/package.jpg" alt="">
+                                    <h3 class="game-title">ダンボール戦機W</h3>
+                                </a>
+                                <p class="series">ダンボール戦機シリーズ</p>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Clear Part">
+                                <a href="/game/eltoria/">
+                                    <img src="/game/eltoria/package.jpg" alt="">
+                                    <h3 class="game-title">小さな王国エルトリア</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/dino-crisis/">
+                                    <img src="/game/dino-crisis/package.jpg" alt="">
+                                    <h3 class="game-title">ディノクライシス</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/tales-of-fantasia/">
+                                    <img src="/game/tales-of-fantasia/package.jpg" alt="">
+                                    <h3 class="game-title">テイルズオブファンタジア</h3>
+                                </a>
+                                <p class="series">テイルズオブシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/tales-of-destiny/">
+                                    <img src="/game/tales-of-destiny/package.jpg" alt="">
+                                    <h3 class="game-title">テイルズオブデスティニー</h3>
+                                </a>
+                                <p class="series">テイルズオブシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Clear">
+                                <a href="/game/dewprism/">
+                                    <img src="/game/dewprism/package.jpg" alt="">
+                                    <h3 class="game-title">デュープリズム</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Nothing">
+                                <a href="/game/animal-crossing-tobidase/">
+                                    <img src="/game/animal-crossing-tobidase/package.jpg" alt="">
+                                    <h3 class="game-title">とびだせどうぶつの森</h3>
+                                </a>
+                                <p class="series">どうぶつの森シリーズ</p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Non">
+                                <a href="/game/neo-atlas/">
+                                    <img src="/game/neo-atlas/package.jpg" alt="">
+                                    <h3 class="game-title">Neo ATLAS</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/biohazard2/">
+                                    <img src="/game/biohazard2/package.png" alt="">
+                                    <h3 class="game-title">バイオハザード2</h3>
+                                </a>
+                                <p class="series">バイオハザードシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/biohazard3">
+                                    <img src="/game/biohazard3/package.jpg" alt="">
+                                    <h3 class="game-title">バイオハザード3<span>ラストエスケープ</span></h3>
+                                </a>
+                                <p class="series">バイオハザードシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/parasite-eve/">
+                                    <img src="/game/parasite-eve/package.jpg" alt="">
+                                    <h3 class="game-title">パラサイトイヴ</h3>
+                                </a>
+                                <p class="series">パラサイトイヴシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/parasite-eve2/">
+                                    <img src="/game/parasite-eve2/package.jpg" alt="">
+                                    <h3 class="game-title">パラサイトイヴ2</h3>
+                                </a>
+                                <p class="series">パラサイト・イヴシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP Non">
+                                <a href="/game/parasite-eve3/">
+                                    <img src="/game/parasite-eve3/package.jpg" alt="">
+                                    <h3 class="game-title">ザ・サード バースデイ</h3>
+                                </a>
+                                <p class="series">パラサイト・イヴシリーズ</p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Playing">
+                                <a href="/game/baroque/">
+                                    <img src="/game/baroque/package.jpg" alt="">
+                                    <h3 class="game-title">バロック<span>歪んだ妄想</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#プレイ中">プレイ中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/ff9/.html">
+                                    <img src="/game/ff9/package.jpg" alt="">
+                                    <h3 class="game-title">ファイナルファンタジーIX</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP Non">
+                                <a href="/game/phantasy-star/">
+                                    <img src="/game/phantasy-star/package.jpg" alt="">
+                                    <h3 class="game-title">ファンタシースターポータブル</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS2 Off Clear Part">
+                                <a href="/game/beatdown/">
+                                    <img src="/game/beatdown/package.jpg" alt="">
+                                    <h3 class="game-title">BEAT DOWN</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS2">PS2</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="SFC On Clear">
+                                <a href="/game/sailormoon/">
+                                    <img src="/game/sailormoon/package.jpg" alt="">
+                                    <h3 class="game-title">美少女戦士セーラームーン</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#スーファミ">スーファミ</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="SFC On Clear">
+                                <a href="/game/final-fight2/">
+                                    <img src="/game/final-fight2/package.jpg" alt="">
+                                    <h3 class="game-title">ファイナルファイト2</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#スーファミ">スーファミ</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear Part">
+                                <a href="/game/blue-forest-story">
+                                    <img src="/game/blue-forest-story/package.jpg" alt="">
+                                    <h3 class="game-title">ブルーフォレスト物語</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/breath-of-fire3/">
+                                    <img src="/game/breath-of-fire3/package.jpg" alt="">
+                                    <h3 class="game-title">ブレスオブファイアIII</h3>
+                                </a>
+                                <p class="series">ブレスオブファイアシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/breath-of-fire4/">
+                                    <img src="/game/breath-of-fire4/package.jpg" alt="">
+                                    <h3 class="game-title">ブレスオブファイアIV<span>うつろわざるもの</span></h3>
+                                </a>
+                                <p class="series">ブレスオブファイアシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Now">
+                                <a href="/game/vagrant-story/">
+                                    <img src="/game/vagrant-story/package.jpg" alt="">
+                                    <h3 class="game-title">ベイグラントストーリー</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="/game/#プレイ中">プレイ中</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Clear">
+                                <a href="/game/heracles/">
+                                    <img src="/game/heracles/package.jpg" alt="">
+                                    <h3 class="game-title">ヘラクレスの栄光<span>魂の証明</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Non">
+                                <a href="/game/bealphareth/">
+                                    <img src="/game/bealphareth/package.jpg" alt="">
+                                    <h3 class="game-title">ベアルファレス</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS2 Off Clear">
+                                <a href="/game/bokunatsu2/">
+                                    <img src="/game/bokunatsu2/package.jpg" alt="">
+                                    <h3 class="game-title">ぼくの夏休み2<span>海の冒険篇</span></h3>
+                                </a>
+                                <p class="tag"><a href="#PS2">PS2</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Playing Stop">
+                                <a href="/game/popolocrois-story/">
+                                    <img src="/game/popolocrois-story/package.jpg" alt="">
+                                    <h3 class="game-title">ポポロクロイス物語</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#停止中">停止中</a><a href="/game/#プレイ中">プレイ中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Stop">
+                                <a href="/game/mahoutukaini-naru-houhou/">
+                                    <img src="/game/mahoutukaini-naru-houhou/package.jpg" alt="">
+                                    <h3 class="game-title">魔法使いになる方法</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/myst/">
+                                    <img src="/game/myst/package.jpg" alt="">
+                                    <h3 class="game-title">MYST</h3>
+                                </a>
+                                <p class="series">MYSTシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/riven/">
+                                    <img src="/game/riven/package.jpg" alt="">
+                                    <h3 class="game-title">RIVEN<span>THE SEQUEL TO THE MYST</span></h3>
+                                </a>
+                                <p class="series">MYSTシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS Non">
+                                <a href="/game/musashiden/">
+                                    <img src="/game/musashiden/package.jpg" alt="">
+                                    <h3 class="game-title">武蔵伝</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/conan/">
+                                    <img src="/game/conan/package.jpg" alt="">
+                                    <h3 class="game-title">名探偵コナン</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS2 Off Clear">
+                                <a href="/game/yakuza/">
+                                    <img src="/game/yakuza/package.jpg" alt="">
+                                    <h3 class="game-title">龍が如く</h3>
+                                </a>
+                                <p class="series">龍が如くシリーズ</p>
+                                <p class="tag"><a href="/game/#P2">PS2</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS2 Off Clear">
+                                <a href="/game/yakuza2/">
+                                    <img src="/game/yakuza2/package.jpg" alt="">
+                                    <h3 class="game-title">龍が如く2</h3>
+                                </a>
+                                <p class="series">龍が如くシリーズ</p>
+                                <p class="tag"><a href="/game/#P2">PS2</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Clear Part">
+                                <a href="/game/linda/">
+                                    <img src="/game/linda/package.jpg" alt="">
+                                    <h3 class="game-title">リンダキューブアゲイン</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/lunar/">
+                                    <img src="/game/lunar/package.jpg" alt="">
+                                    <h3 class="game-title">LUNAR<span>シルバースターストーリー</span></h3>
+                                </a>
+                                <p class="series">LUNARシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/lunar2/">
+                                    <img src="/game/lunar2/package.jpg" alt="">
+                                    <h3 class="game-title">LUNAR2<span>エターナルブルー</span></h3>
+                                </a>
+                                <p class="series">LUNARシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS_archive Off Clear Part">
+                                <a href="/game/lunatic-dawn-odessey">
+                                    <img src="/game/lunatic-dawn-odessey/package.png" alt="">
+                                    <h3 class="game-title">ルナティックドーン オデッセイ</h3>
+                                </a>
+                                <p class="series">ルナティックドーンシリーズ</p>
+                                <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Playing Stop">
+                                <a href="/game/lunatic-dawn3">
+                                    <img src="/game/lunatic-dawn3/package.jpg" alt="">
+                                    <h3 class="game-title">ルナティックドーン3</h3>
+                                </a>
+                                <p class="series">ルナティックドーンシリーズ</p>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#停止中">停止中</a></p>
+                            </li>
+
+                            <li class="target" data-category="PS On Clear">
+                                <a href="/game/rondonseirei-tanteidan/">
+                                    <img src="/game/rondonseirei-tanteidan/package.jpg" alt="">
+                                    <h3 class="game-title">倫敦精霊探偵団</h3>
+                                </a>
+                                <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="PSP On Clear Part">
+                                <a href="/game/ygo-tfsp/">
+                                    <img src="/game/ygo-tfsp/package.jpg" alt="">
+                                    <h3 class="game-title">遊戯王ARC-V TFSP</h3>
+                                </a>
+                                <p class="series">遊戯王シリーズ</p>
+                                <p class="tag"><a href="#PSP">PSP</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+                        </ul>
+
+                    </section>
+
+                    <!-- contents その他ゲーム -->
+                    <section id="else" class="else-games">
+                        <h2 class="section-title">その他ゲーム</h2>
+                        <ul class="game-list">
+
+                            <li class="target" data-category="Steam On Nothing">
+                                <a href="/game/granado-espada/">
+                                    <img src="/game/granado-espada/package.jpg" alt="">
+                                    <h3 class="game-title">Granado Espada</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア条件なし">クリア条件なし</a></p>
+                            </li>
+
+                            <li class="target" data-category="Else Off Nothing">
+                                <a href="/game/jan-ryu-mon/">
+                                    <img src="/game/jan-ryu-mon/package.jpg" alt="">
+                                    <h3 class="game-title">雀龍門</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="Steam On Now Nothing">
+                                <a href="/game/stardew-valley/">
+                                    <img src="/game/stardew-valley/package.png" alt="">
+                                    <h3 class="game-title">Stardew Valley</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="Else Off Nothing">
+                                <a href="/game/animal-crossing-pocket/">
+                                    <img src="/game/animal-crossing-pocket/package.jpg" alt="">
+                                    <h3 class="game-title">どうぶつの森<span>ポケットキャンプ</span></h3>
+                                </a>
+                                <p class="series">どうぶつの森シリーズ</p>
+                                <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="Else Off Nothing">
+                                <a href="/game/megido72/">
+                                    <img src="/game/megido72/package.jpg" alt="">
+                                    <h3 class="game-title">メギド72</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="Else Off Nothing">
+                                <a href="/game/fgo/">
+                                    <img src="/game/fgo/package.jpg" alt="">
+                                    <h3 class="game-title">Fate Grand Order</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="DS Off Clear">
+                                <a href="/game/ygo-dm-saikyocard-battle/">
+                                    <img src="/game/ygo-dm-saikyocard-battle/package.jpg" alt="">
+                                    <h3 class="game-title">遊戯王DM 最強カードバトル</h3>
+                                </a>
+                                <p class="series">遊戯王シリーズ</p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="Steam Off Nothing">
+                                <a href="/game/ygo-duel-links/">
+                                    <img src="/game/ygo-duel-links/package.png" alt="">
+                                    <h3 class="game-title">遊戯王デュエルリンクス</h3>
+                                </a>
+                                <p class="series">遊戯王シリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- contents その他ゲーム 終わり-->
+
+
+
+                    <!-- contents フリーゲーム -->
+                    <section id="free" class="free-games">
+                        <h2 class="section-title">フリーゲーム</h2>
+                        <ul class="game-list">
+                            <li class="target" data-category="Free On Clear">
+                                <a href="/game/freegames/do-you-have-a-grudge/">
+                                    <img src="/game/freegames/do-you-have-a-grudge/package.jpg" alt="">
+                                    <h3 class="game-title">Do You Have A Grudge?</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#フリーゲーム">フリーゲーム</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="Free On Clear">
+                                <a href="/game/freegames/the-house/">
+                                    <img src="/game/freegames/the-house/package.png" alt="">
+                                    <h3 class="game-title">The House</h3>
+                                </a>
+                                <p class="series">The Houseシリーズ</p>
+                                <p class="tag"><a href="/game/#フリーゲーム">フリーゲーム</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="Free On Clear">
+                                <a href="/game/freegames/the-house2/">
+                                    <img src="/game/freegames/the-house2/package.png" alt="">
+                                    <h3 class="game-title">The House2</h3>
+                                </a>
+                                <p class="series">The Houseシリーズ</p>
+                                <p class="tag"><a href="/game/#フリーゲーム">フリーゲーム</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="Free On Clear">
+                                <a href="/game/freegames/hitorikakurenbo/">
+                                    <img src="/game/freegames/hitorikakurenbo/package.png" alt="">
+                                    <h3 class="game-title">ひとりかくれんぼ</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#フリーゲーム">フリーゲーム</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="Free On Clear">
+                                <a href="/game/freegames/gravity-master/">
+                                    <img src="/game/freegames/gravity-master/package.png" alt="">
+                                    <h3 class="game-title">Gravity Master</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#フリーゲーム">フリーゲーム</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target" data-category="Free On Clear">
+                                <a href="/game/freegames/fuunaiuchigakuen-flat/">
+                                    <img src="/game/freegames/fuunaiuchigakuen-flat/package.jpg" alt="">
+                                    <h3 class="game-title">風雲相討学園フラット</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#フリーゲーム">フリーゲーム</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                        </ul>
+                    </section>
+                    <!-- contents フリーゲーム 終わり-->
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- contents -->
+  <!-- トップに戻るボタン -->
+  <button id="back-to-top" aria-label="トップに戻る" type="button"></button>
+
+
+    <footer id="footer">
+        <p class="inner">&copy; きっこっこ*</p>
+    </footer>
+
+    </div>
+</body>
+
+</html>

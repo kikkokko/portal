@@ -1,0 +1,20 @@
+# .gitignore は Gitにアップロードしたくないファイルやフォルダを
+# 指定するためのテキストファイルです。
+# PCには置いておきたいけどアップしたくない ファイル/フォルダ名を書く。
+# 除外対象になったファイルは、VSCode左側のファイル一覧で見ると、グレーの表示になってるよ。
+
+# VSCode特有のフォルダ
+.vscode/
+node_modules/
+
+# VSCode特有のファイル
+package-lock.json
+*.code-workspace
+
+# Windowsが勝手に生成するファイル
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+[Dd]esktop.ini

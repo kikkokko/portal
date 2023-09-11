@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header id="header">
+        <h1 class="site-title">
+            <a href="index.html"><img src="img/img/logo.svg"></a>
+        </h1>
+        <nav>
+            <ul class="flex">
+                <li><a href="#about" alt="">About</a></li>
+                <li><a href="#works" alt="">Works</a></li>
+                <li><a href="#news" alt="">News</a></li>
+                <li><a href="#contact " alt="">Contact</a></li>
+                <li><a href="#" alt="">
+                        <img src="img/img/icon-instagram.png" alt="インスタグラム">
+                    </a>
+                </li>
+        </nav>
+    </header>
+
+
+    <!-- キービジュアル -->
+    <div class="keyvisual">
+        <img src="img/img/mainvisual-pc.jpg">
+    </div>
+
+
+    <!-- メイン -->
+    <Main id="main">
+
+        <!-- About -->
+        <section id="about" class="wrapper">
+            <h2 class="headline">About</h2>
+            <div class="about-content">
+                <p >Xxxxx Ashley</p>
+                <ul>
+                    <li>2th Floor xxxxx Building x-x-x Nishiazabu, Minato-ku, Tokyo 106-0031 Japan</li>
+                    <li>tel: 000-0000-0000</li>
+                    <li>url: www.xxxxxx.jp</li>
+                    <li>mail: <a href="mailto:">xxx@xxxxxx.jp</a></li>
+                </ul>
+                <p>
+                    プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストスト テキストテキストテキストテキ
+                    ストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキスト
+                </p>
+            </div>
+        </section>
+
+        <!-- Works -->
+        <section id="works" class="wrapper">
+            <h2 class="headline">Works</h2>
+            <ul class="works-list">
+                <li><img src="img/img/works1.jpg"></li>
+                <li><img src="img/img/works2.jpg"></li>
+                <li><img src="img/img/works3.jpg"></li>
+                <li><img src="img/img/works4.jpg"></li>
+                <li><img src="img/img/works5.jpg"></li>
+                <li><img src="img/img/works6.jpg"></li>
+            </ul>
+        </section>
+
+
+        <!-- news -->
+        <section id="news" class="wrapper">
+            <h2 class="headline">News</h2>
+            <dl class="news-list">
+                <dt>2020.XX.XX</dt>
+                <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</dd>
+                <dt>2020.XX.XX</dt>
+                <dd>ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</dd>
+                <dt>2020.XX.XX</dt>
+                <dd>【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+                <dt>2020.XX.XX</dt>
+                <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</dd>
+                <dt>2020.XX.XX</dt>
+                <dd>【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+            </dl>
+        </section>
+
+        <!-- contact -->
+        <div id="contact" class="wrapper">
+            <h2 class="headline">Contact</h2>
+            <form action="/my-handling-form-page" method="post">
+                <ul class="contact">
+                    <li>
+                        <label for="name">NAME</label>
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li>
+                        <label for="msg">MESSAGE</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <li>
+                        <button type="submit" class="button">送信</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+    </Main>
+
+
+    <!-- フッター -->
+    <footer id="footer">
+        <div>
+            <p>
+                &copy; 2020 My Work
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

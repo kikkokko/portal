@@ -1,0 +1,11 @@
+-
+	var sample = [
+		{id: "test1"},
+		{id: "test2"},
+		{id: "test3", title: "テスト3"}
+	]
+
+ul
+	each x, index in sample
+		li #{x.id}
+			a(href=x.title+"/")= x.title
