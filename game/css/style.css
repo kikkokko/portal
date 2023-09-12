@@ -1288,52 +1288,37 @@ input[type="checkbox"] {
 
 
 
+/*--TOPに戻るボタン--*/
 
+html {
+    scroll-behavior: smooth;
+}
 
-
-
-
-/* トップに戻るボタン -----------------*/
-#back-to-top {
+.pagetop {
     position: fixed;
-    bottom: 75px;
-    right: 20px;
-    width: 5rem;
-    height: 5rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    background: #FFF;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    bottom: 30px;
     background: #F4C7C3;
-    text-align: center;
-    transition: opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    visibility: 0;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
 }
 
-#back-to-top::before {
-    content: "";
-    display: block;
-    margin: 0.5rem auto 0;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 2px solid #FFF;
-    border-width: 2px 2px 0 0;
-    transform: rotate(-45deg);
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: translateY(20%) rotate(-45deg);
 }
 
-#back-to-top:active {
-    transform: scale(1.1);
-}
 
-#back-to-top.is-show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#back-to-top.is-hide {
-    opacity: 0;
-    visibility: hidden;
-}
 
 /* テキスト選択時の色 */
 ::-moz-selection {
