@@ -537,7 +537,7 @@ input[type="checkbox"] {
     font-size: 3rem;
     font-weight: bold;
     margin-top: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 #page .section-title:not(#summary .section-title){
