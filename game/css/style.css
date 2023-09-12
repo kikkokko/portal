@@ -537,7 +537,7 @@ input[type="checkbox"] {
     font-size: 3rem;
     font-weight: bold;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 #page .section-title:not(#summary .section-title){
@@ -545,7 +545,7 @@ input[type="checkbox"] {
     font-size: 3rem;
     font-weight: bold;
     margin-top: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -566,7 +566,7 @@ input[type="checkbox"] {
 #page .subtitle {
     /*---h4---*/
     font-size: 2.3rem;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 #Page .subsubtitle {
@@ -593,6 +593,10 @@ input[type="checkbox"] {
 /*----------
 ページメニュー
 ------------*/
+
+#page nav{
+    margin-bottom: 150px;
+}
 
 #page .menu ul {
     font-size: 1.6rem;
@@ -759,7 +763,7 @@ tr:nth-child(even) {
     display: flex;
     flex-wrap: wrap;
     margin-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #page dt {
