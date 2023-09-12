@@ -885,6 +885,9 @@ tr:nth-child(even) {
     margin-bottom: 60px;
 }
 
+#mainvisual img {
+    width: 100vw;
+}
 
 /*-------------------------------------------
         INDEX
