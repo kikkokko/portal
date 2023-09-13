@@ -215,13 +215,15 @@ li {
     position: fixed;
 
     top: 0;
-    left: 100%; /* メニューを画面の外に飛ばす */
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
     z-index: 99;
 
     background: rgba(255, 187, 55, .9);
     backdrop-filter: blur(5px);
     transition: .3s;
-  }
+}
+
 /* .nav_content {
     width: 80vw;
     font-size: 3vh;
@@ -242,16 +244,16 @@ li {
     transition: .3s;
 } */
 
-/* メニュー黒ポチを消す */s
-.hamburger_list {
+/* メニュー黒ポチを消す */
+s .hamburger_list {
     list-style: none;
     gap: 0 25px;
     justify-content: right;
     flex-wrap: wrap
 }
 
-.hamburger_list li{
-padding-bottom: 30px;
+.hamburger_list li {
+    padding-bottom: 30px;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -989,8 +991,18 @@ input[type="checkbox"] {
 
 .font-bold {
     font-weight: bold;
-    font-size: 1.1em;
 }
+
+.font-big {
+
+    font-size: 1.2em;
+}
+
+.font-small {
+    font-size: 1.2rem;
+}
+
+
 
 /*--色--*/
 .bc-black {
@@ -1008,7 +1020,31 @@ input[type="checkbox"] {
 }
 
 
+/*--Flexコンテンツ用
+            横幅指定のみ箱--*/
+.box30 {
+    width: 30%;
+}
 
+.box33 {
+    /*---横33%(一列に3つ)--*/
+    width: 33%;
+}
+
+
+.box50 {
+    /*--横50%(一列に2つ) --*/
+    width: 50%;
+}
+
+.box70 {
+    width: 70%;
+}
+
+.box100 {
+    /*-- 横100%(一列に1つ--*/
+    width: 100%;
+}
 
 
 
@@ -1186,17 +1222,15 @@ input[type="checkbox"] {
     display: flex;
 }
 
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
 /*--Flexコンテンツ用
             横幅指定のみ箱--*/
-.box100 {
-    /*-- 横100%(一列に1つ--*/
-    width: 100%;
+.box33 {
+    /*---横33%(一列に3つ)--*/
+    width: 33%;
+}
+
+.box40 {
+    width: 40%;
 }
 
 .box50 {
@@ -1208,10 +1242,15 @@ input[type="checkbox"] {
     width: 55%;
 }
 
-.box33 {
-    /*---横33%(一列に3つ)--*/
-    width: 33%;
+.box60 {
+    width: 60%;
 }
+
+.box100 {
+    /*-- 横100%(一列に1つ--*/
+    width: 100%;
+}
+
 
 
 
@@ -1288,7 +1327,9 @@ input[type="checkbox"] {
 
 
 
-/*--TOPに戻るボタン--*/
+/*--TOPに戻るボタン
+https://rilaks.jp/blog/pagetop-css/
+--*/
 
 html {
     scroll-behavior: smooth;
@@ -1350,14 +1391,14 @@ html {
 }
 
 
+
+
+
 /*--------------------------------------------------------
 スマホ、タブレット用
 横幅1024pxで切り替え
 --------------------------------------------------------*/
 @media screen and (max-width: 650px) {
-    .inner {
-        padding: 0 20px;
-    }
 
     /*-------------------------------------------
         ヘッダー
@@ -1371,6 +1412,9 @@ html {
     .global-navi_menu {
         display: none;
     }
+}
+
+@media screen and (max-width: 1200px) {
 
     /*コンテンツ幅を設定するための共通クラス*/
     .container {
@@ -1380,6 +1424,20 @@ html {
         padding-left: pxvw(10, 375);
         padding-right: pxvw(10, 375);
     }
+
+
+    .inner {
+        padding: 0 20px;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .inner {
+        padding: 0 20px;
+    }
+
 
     /*-------------------------------------------
     個別ページ
