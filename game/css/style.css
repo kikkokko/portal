@@ -900,16 +900,18 @@ input[type="checkbox"] {
 }
 
 #page dt {
-    width: 120px;
+    /* width: 180px; */
+    width: 30%;
     padding-right: 10px;
     padding-bottom: 5px;
     border-bottom: dashed 1px #999;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 #page dd {
-    flex-basis: calc(100% - 120px);
-    /*幅*/
+    /* flex-basis: calc(100% - 180px); */
+    width: 70%;
     padding-bottom: 5px;
     border-bottom: dashed 1px #999;
     margin-bottom: 10px;
@@ -1412,13 +1414,26 @@ html {
     .global-navi_menu {
         display: none;
     }
+
+    #page dl {
+        flex-direction: column;
+    }
+
+    #page dt {
+        width: 100%;
+        border-bottom: none;
+    }
+
+    #page dd {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
 
     /*コンテンツ幅を設定するための共通クラス*/
     .container {
-        max-width: 90%;
+        max-width: 80%;
         margin: 0 auto;
         margin-bottom: 25px;
         padding-left: pxvw(10, 375);
@@ -1438,6 +1453,14 @@ html {
         padding: 0 20px;
     }
 
+
+    /*---dl----*/
+    #page dl {
+        width: 90%;
+    }
+
+
+    /*---dlおわり----*/
 
     /*-------------------------------------------
     個別ページ
