@@ -1009,6 +1009,10 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+.font-red {
+    color: red;
+}
+
 .font-bold {
     font-weight: bold;
 }
@@ -1022,11 +1026,12 @@ input[type="checkbox"] {
     font-size: 1.2rem;
 }
 
-.font-right {
+.text-right {
     text-align: right;
 }
-.font-red {
-    color: red;
+
+.font-right {
+    text-align: right;
 }
 
 
