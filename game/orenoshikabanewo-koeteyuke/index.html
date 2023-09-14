@@ -41,6 +41,17 @@
     <meta name="twitter:description" content="きっこのゲームまとめ" />
     <meta name="twitter:image:src" content="https://kikko.pages.dev/game/img/twittercard.jpg" />
 
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QTVYGJP9C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5QTVYGJP9C');
+    </script>
+
 </head>
 
 <body>
@@ -52,7 +63,7 @@
         <div id="global-navi">
             <nav class="global-navi_menu">
                 <ul class="global-navi_list">
-                    <li><a href="/game/#gamelist">ゲームリスト</a></li>
+                    <li><a href="/game/">ゲームリスト</a></li>
                     <li><a href="/game/about.html">配信について</a></li>
                     <li><a href="https://www.youtube.com/@coccokikko">Youtube</a></li>
                     <li><a href="/"><img src="/game/img/svg/bx-home-alt.svg"></a></li>
@@ -71,7 +82,7 @@
                 <!-- メニュー -->
                 <nav class="hamburger_content">
                     <ul class="hamburger_list">
-                        <li><a href="/game/#gamelist">ゲームリスト</a></li>
+                        <li><a href="/game/">ゲームリスト</a></li>
                         <li><a href="/game/about.html">配信について</a></li>
                         <li><a href="https://www.youtusbe.com/@coccokikko">Youtube</a></li>
                         <li><a href="/">ポータルサイトに戻る</a></li>
@@ -127,6 +138,7 @@
                     <li><a href="#story">お話の内容まとめ</a></li>
                     <li><a href="#data">ゲームデータ</a></li>
                     <!--<li><a href="#gallery">ギャラリー</a></li>-->
+                    <li><a href="#disqus_thread">コメントボード</a></li>
                 </ul>
 
             </nav>
@@ -1054,21 +1066,60 @@
 
             </section>
 
-            <!--
-            <section id="gallery">
+
+            <!-- <section id="gallery">
                 <h3 class="section-title">ギャラリー</h3>
+
                 <div>
-                    <section class="page-chest">
-                        <img src="01.png" alt="">
-                        <img src="02.png" alt="">
-                        <img src="03.png" alt="">
-                        <img src="04.png" alt="">
+
+                    <section class="page-chest か gallery-container_large か gallery-container_small">
+                        <img src="/game/フォルダ名/img/01.png">
+                        <img src="/game/フォルダ名/img/02.png">
+                        <img src="/game/フォルダ名/img/03.png">
+                        <img src="/game/フォルダ名/img/04.png">
+                    </section>
+
+                    ギャラリーをセクションで分ける場合
+                    <section>
+                        <h4 class="subtitle">ED01：それぞれの行く道</h4>
+                        <div class="page-chest か gallery-container_large か gallery-container_small">
+                            <img src="/game/blue-forest-story/img/ed01-01.png">
+                            <img src="/game/blue-forest-story/img/ed01-02.png">
+                        </div>
                     </section>
 
                 </div>
 
-            </section>
-            -->
+            </section> -->
+
+
+        </article>
+
+
+
+        <!--Disqusコメント欄（ゲームメモ用） -->
+        <div id="disqus_thread" class="container">
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-kikko-pages-dev.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+
 
     </main>
 
