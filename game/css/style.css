@@ -699,6 +699,12 @@ input[type="checkbox"] {
     margin-bottom: 40px;
 }
 
+#video .subtitle {
+    /*---h4---*/
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 #Page .subsubtitle {
     /*---h5---*/
     font-size: 1.7rem;
@@ -925,16 +931,28 @@ input[type="checkbox"] {
 プレイメモ
 ------------*/
 
-#page .excel {
+
+/* #page .excel {
     width: 100%;
     height: 80%;
     border: solid 1px #333;
-    padding: 20px;
+    padding: 0px;
+} */
+
+
+ #memo iframe  {
+    width: 100%;
+    height: 90%;
+    border: solid 1px #333;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
 }
+
 
 #page .box-border {
     border: solid 1px #333;
-    padding: 20px;
+    padding: 5px;
 }
 
 #page .rightside {
@@ -960,6 +978,7 @@ input[type="checkbox"] {
 /*----ギャラリー----*/
 #gallery img {
     display: block;
+    object-fit: cover;
 }
 
 .gallery-container_small {
@@ -975,12 +994,14 @@ input[type="checkbox"] {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     /* grid-auto-rows: repeat(auto-fit, minmax(400px, 1fr)); */
-    grid-auto-rows: 1fr;
+    /* grid-auto-rows: 1fr; */
     justify-content: space-around;
     grid-gap: 1em;
-
 }
 
+.gallery-container_large img {
+    object-fit: cover;
+}
 
 /*----挿入動画----*/
 .video-grid {
