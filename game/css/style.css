@@ -782,9 +782,17 @@ input[type="checkbox"] {
     margin-left: 15px;
 }
 
-#page li:not(.list-style li, .menu li) {
+#page li:not(.list-style li, .menu li, table li, dl li) {
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 2rem;
+    list-style-position: outside;
+    list-style: disc;
+}
+
+#page table li, #page dl li {
+    margin-bottom: 0px;
+    margin-top: 0px;
     margin-left: 2rem;
     list-style-position: outside;
     list-style: disc;
