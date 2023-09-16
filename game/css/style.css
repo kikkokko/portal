@@ -570,7 +570,15 @@ input[type="checkbox"] {
 .game-list li {
     width: 100%;
     height: 400px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+/* .non {
+    background-color: #ccc;
+} */
+.non img {
+    filter: grayscale(100%);
 }
 
 /*
