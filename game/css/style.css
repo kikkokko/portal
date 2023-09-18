@@ -102,6 +102,9 @@ li {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+
+    position: sticky;
+    top: 0;
 }
 
 #list-header {
@@ -1047,6 +1050,129 @@ input[type="checkbox"] {
 
 /*----挿入動画おわり----*/
 
+
+/*--------------------------------------------------------
+スマホ、タブレット用
+横幅1024pxで切り替え
+--------------------------------------------------------*/
+@media screen and (max-width: 650px) {
+
+    /*---ゲームタイトル h2----*/
+#page .game-title {
+    font-size: 3rem;
+}
+
+#page .game-title span {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+}
+
+#page .game-title span::before {
+    content: "-";
+}
+
+#page .game-title span::after {
+    content: "-";
+}
+
+/*---ゲームタイトル h2おわり---*/
+
+/*---セクションタイトル h3---*/
+#summary .section-title {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#page .section-title:not(#summary .section-title) {
+    display: flex;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+#page .section-title:not(#summary .section-title)::before,
+#page .section-title:not(#summary .section-title)::after {
+    content: "";
+    background: #333;
+    display: block;
+    width: 15px;
+    height: 3px;
+    border-radius: 1.5px;
+    margin: 0 0.8em;
+}
+
+/*---セクションタイトル h3おわり---*/
+
+#page .subtitle {
+    /*---h4---*/
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#video .subtitle {
+    /*---h4---*/
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#Page .subsubtitle {
+    /*---h5---*/
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#Page .page-chest {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+
+#page p {
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+
+.indent {
+    margin-left: 3px;
+}
+
+
+/*----ギャラリー----*/
+#gallery img {
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-container_small {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    justify-content: space-around;
+    grid-gap: 1em;
+}
+
+
+.gallery-container_large {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    grid-gap: 1em;
+}
+
+.gallery-container_large img {
+    object-fit: cover;
+}
+
+}
+
+
+
 /*----------
 その他
 ------------*/
@@ -1728,6 +1854,16 @@ html {
     .targets {
         border: solid 1px #333;
         border-radius: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 3%;
+    }
+
+    .game-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 2em;
     }
 
     .game-list li {
@@ -1737,17 +1873,23 @@ html {
         margin-bottom: 20px;
     }
 
+    /*
+  vertical-align: top;
+  画像の下にできる隙間を消す
+  */
+    .game-list img {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+        vertical-align: top;
+        object-fit: cover;
+    }
+
     /* .gallery-container_large {
         display: flex;
         flex-wrap: wrap;
     } */
 
-    .game-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 1fr);
-        grid-auto-rows: 1fr;
-        grid-gap: 2em;
-    }
 }
 
 @media screen and (max-width: 1200px) {
