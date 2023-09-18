@@ -725,7 +725,7 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-.page-chest {
+#Page .page-chest {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-auto-rows: repeat(auto-fit, minmax(250px, 1fr));
@@ -1246,7 +1246,7 @@ input[type="checkbox"] {
 
 #about section {
     background-color: #FFF;
-    background:rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 20px;
 }
@@ -1695,6 +1695,19 @@ html {
         flex-wrap: wrap;
     }
 
+    /*基本リスト幅のためのクラス*/
+    .wide-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /*コンテンツ幅を設定するための共通クラス*/
+    .container {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .global-navi_menu {
         display: none;
     }
@@ -1712,10 +1725,29 @@ html {
         width: 100%;
     }
 
+    .targets {
+        border: solid 1px #333;
+        border-radius: 10px;
+    }
+
+    .game-list li {
+        width: 100%;
+        height: 400px;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+    }
+
     /* .gallery-container_large {
         display: flex;
         flex-wrap: wrap;
     } */
+
+    .game-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 2em;
+    }
 }
 
 @media screen and (max-width: 1200px) {
