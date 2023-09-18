@@ -20,8 +20,8 @@
     -->
 
     <!-- スタイルシート -->
-    <link rel="stylesheet" href="/game/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/game/css/style.css">
 
     <script>
         console.log("きっこっこ*ゲーム");
@@ -41,6 +41,15 @@
     <meta name="twitter:description" content="きっこのゲームまとめ" />
     <meta name="twitter:image:src" content="https://kikko.pages.dev/game/img/twittercard.jpg" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QTVYGJP9C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5QTVYGJP9C');
+    </script>
 </head>
 
 <body>
@@ -93,99 +102,104 @@
 
 
     <!-- メイン -->
-    <main id="about">
+    <div class="mainvisual">
 
-        <!-- メインビジュアル -->
-        <div id="mainvisual">
-            <img src="img/mainvisual.png" alt="こっこきっこがゲームしてる絵">
-        </div>
+        <main id="about">
 
-
-
-        <!-- contents -->
-        <section class="container wrapper">
-            <h3 class="section-title">配信ログ</h3>
-
-            <div class="video-grid">
-
-                <!-- Youtube最新動画 -->
-                <section id="youtube">
-                    <h4 class="subtitle">
-                        <a href="https://www.youtube.com/@coccokikko" target="_blank" title="Youtube">
-                            <img class="svg-h-icon" src="/game/img/svg/bxl-youtube.svg">Youtube最新動画
-                        </a>
-                    </h4>
-                    <div class="video-iframe">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNqNfLHg1hhHzQTxnnkvEbWiLdcCpeVZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                </section>
-
-                <!-- Twitch最新動画 -->
-                <section id="Twitch">
-                    <h3 class="sub-title">
-                        <a href="https://wwwtwitch.tv/kikkoch/" target="_blank">
-                            <img class="svg-h-icon" src="/game/img/svg/bxl-twitch.svg">Twitch最新動画
-                        </a>
-                    </h3>
-                    <div class="video-iframe">
-                        <iframe id="embed-twitch" src="https://player.twitch.tv/?collection=KNBEdVGxghUfMg&parent=kikko.pages.dev&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
-                    </div>
-                </section>
+            <!-- メインビジュアル -->
+            <div id="mainvisual">
+                <img src="img/mainvisual.png" alt="こっこきっこがゲームしてる絵">
             </div>
-        </section>
-
-        <section class="container">
-            <h3 class="section-title">きっこの配信</h3>
-            <p>
-                マイナー系の無印PSゲームプレイのプレイ配信やイラスト等作業を配信しています。<br>
-                メインストリームはkukuluLIVEとYoutubeで、ログはYoutubeに残しています。古いログはTwitchに。
-            </p>
-
-            <dl>
-                <dt><a href="https://www.youtube.com/@coccokikko" target="_blank">Youtube</a>
-                <dt>
-                <dd>メインストリーム・ログ倉庫</dd>
-
-                <dt><a href="https://live.erinn.biz/userdata.php?uid://coccokikko:kukuluID/" target="_blank">kukululive</a>
-                <dt>
-                <dd>メインストリーム・ログなし</dd>
-
-                <dt><a href="https://www.twitch.tv/kikkoch/" target="_blank">Twitch</a>
-                <dt>
-                <dd>サブストリーム・もっと昔のログ倉庫</dd>
-
-            </dl>
-
-        </section>
-
-
-        <section class="container">
-            <h3 class="section-title"></h3>
-
-        </section>
-
-
-        <section class="container">
-            <h3 class="section-title"></h3>
-
-        </section>
-        <!-- contents -->
 
 
 
-    </main>
 
-    <footer id="footer">
-        <!-- トップに戻るボタン -->
+            <section class="container">
+                <h3 class="section-title">ここはどこ？</h3>
+                <p>
+                    ここは、<a href="/" class="link-blank"><span class="font-bold">桔子</span></a>の桔子による桔子のゲームプレイのための桔子のゲームメモ用ページです。
+                </p>
+                <p>
+                    ゲームしたり雑談したりいきなり歌いだしたりお絵描きする配信をしている桔子が、配信内で、あるいは配信外でしたゲーム体験のメモのために作っています。<br>
+                    各ゲームのメモは、細かく書いているのもあるので、ゲームの内容が分からない時にここ見れば分かるかも。<br>
+                    <span class="font-red font-bold">しかし全てのネタバレ要素が普通に書かれてたりするので注意してください。</span><br>
+                    また、基本的には桔子個人のための備忘録 兼 配信動画まとめ用サイトなので、間違ったことを書いてたりすることもあると思います。<br>
+                    気になることがあれば、各ページあるコメントボードで指摘していただいても大丈夫です。
+                </p>
+            </section>
 
-        <a class="pagetop" href="#">
-            <div class="pagetop__arrow"></div>
-        </a>
-        <!-- <button id="back-to-top" aria-label="トップに戻る" type="button"></button> -->
+            <section class="container">
+                <h3 class="section-title">きっこの配信</h3>
+                <section>
+                <p>
+                    ゲームしたり雑談したりいきなり歌いだしたりお絵描きする配信をしています。<br>
+                    ゲームはマイナー系の無印PSゲームプレイが多いです。<br>
+                    メインストリームはkukuluLIVEとYoutubeで、ログはYoutubeに残しています。古いログはTwitchに。
+                </p>
+                </section>
+
+                <dl>
+                    <dt><a href="https://www.youtube.com/@coccokikko" target="_blank">Youtube</a>
+                    </dt>
+                    <dd>メインストリーム・ログ倉庫</dd>
+
+                    <dt><a href="https://live.erinn.biz/userdata.php?uid://coccokikko:kukuluID/" target="_blank">kukululive</a>
+                    </dt>
+                    <dd>メインストリーム・ログなし</dd>
+
+                    <dt><a href="https://www.twitch.tv/kikkoch/" target="_blank">Twitch</a>
+                    </dt>
+                    <dd>サブストリーム・もっと昔のログ倉庫</dd>
+                </dl>
+            </section>
+
+            <!-- contents -->
+            <section class="container">
+                <h3 class="section-title">配信ログ</h3>
+
+                <div class="video-grid">
+
+                    <!-- Youtube最新動画 -->
+                    <section id="youtube">
+                        <h4 class="subsubtitle">
+                            <a href="https://www.youtube.com/@coccokikko" target="_blank" title="Youtube">
+                                <img class="svg-h-icon" src="/game/img/svg/bxl-youtube.svg">Youtube最新動画
+                            </a>
+                        </h4>
+                        <div class="video-iframe">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNqNfLHg1hhHzQTxnnkvEbWiLdcCpeVZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </section>
+
+                    <!-- Twitch最新動画 -->
+                    <section id="Twitch">
+                        <h4 class="subsubtitle">
+                            <a href="https://wwwtwitch.tv/kikkoch/" target="_blank">
+                                <img class="svg-h-icon" src="/game/img/svg/bxl-twitch.svg">Twitch最新動画
+                            </a>
+                        </h4>
+                        <div class="video-iframe">
+                            <iframe id="embed-twitch" src="https://player.twitch.tv/?collection=KNBEdVGxghUfMg&parent=kikko.pages.dev&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="footer">
+            <!-- トップに戻るボタン -->
+
+            <a class="pagetop" href="#">
+                <div class="pagetop__arrow"></div>
+            </a>
+            <!-- <button id="back-to-top" aria-label="トップに戻る" type="button"></button> -->
 
 
-        <p class="inner">&copy; きっこっこ*</p>
-    </footer>
+            <p class="inner">&copy; きっこっこ*</p>
+        </footer>
+
+    </div>
 </body>
 
 </html>

@@ -1131,6 +1131,13 @@ input[type="checkbox"] {
 
 -------------------------------------------*/
 
+
+/* .mainvisual {
+    background: url(/game/img/mainvisual.png) no-repeat fixed;
+    background-size:cover;
+    filter: saturate(30%);
+} */
+
 /*-------------------------------------------
     mainvisual
     -------------------------------------------*/
@@ -1141,6 +1148,160 @@ input[type="checkbox"] {
 #mainvisual img {
     width: 100vw;
 }
+
+#about p {
+    font-size: 1.5rem;
+    line-height:2;
+}
+
+
+#about section {
+    margin-bottom: 130px;
+}
+
+#about section>section {
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+#about section>div>section {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/*---ゲームタイトル h2----*/
+#about .game-title {
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 1px;
+    margin-bottom: 20px;
+    margin-top: 1.6rem;
+}
+
+#about .game-title span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+#about .game-title span::before {
+    content: "-";
+}
+
+#about .game-title span::after {
+    content: "-";
+}
+
+/*---ゲームタイトル h2おわり---*/
+
+/*---セクションタイトル h3---*/
+#about .section-title {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#about .section-title:not(#summary .section-title) {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .section-title:not(#summary .section-title)::before,
+#about .section-title:not(#summary .section-title)::after {
+    content: "";
+    background: #333;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 1.5px;
+    margin: 0 0.8em;
+}
+
+/*---セクションタイトル h3おわり---*/
+
+#about .subtitle {
+    /*---h4---*/
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+#about .subsubtitle {
+    /*---h5---*/
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+#about .page-chest {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2em;
+}
+
+#about p {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.indent {
+    margin-left: 15px;
+}
+
+
+
+/*---dl----*/
+#about dl {
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#about dt {
+    /* width: 180px; */
+    width: 30%;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-bottom: dashed 1px #999;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#about dd {
+    /* flex-basis: calc(100% - 180px); */
+    width: 70%;
+    padding-bottom: 5px;
+    border-bottom: dashed 1px #999;
+    margin-bottom: 10px;
+}
+
+/*---dlおわり----*/
+
+
+#about .link-blank {
+    font-weight: bold;
+}
+
+#about .link-blank::after {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(/game/img/svg/bx-link-external-666.svg);
+    background-size: 1.5rem;
+    margin-right: 3px;
+}
+
 
 /*-------------------------------------------
         INDEX
