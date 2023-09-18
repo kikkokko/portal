@@ -5,6 +5,7 @@ block 個別設定
 	//- 	let 説明文
 	//- 	let OGPイメージ
 	//- 	let あらすじ縦 = false
+	//- 	let アマゾンリンク = "https://"
 
 mixin SECTION(ID,TITLE)
 	section(id=ID)
@@ -56,7 +57,7 @@ html(lang="ja")
 
 			section#summary(class = あらすじ縦 ? "" : "page-chest")
 				div
-					a.ama-link(href="https://amzn.to/xxx" target="_blank")
+					a.ama-link(href=アマゾンリンク target="_blank")
 						img(src="package.jpg" width="100%")
 					p.series
 						if allgame[ID].series !== undefined
