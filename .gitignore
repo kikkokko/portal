@@ -11,6 +11,9 @@ node_modules/
 package-lock.json
 *.code-workspace
 
+# 同期したくないフォルダ
+game/_template/
+
 # Windowsが勝手に生成するファイル
 Thumbs.db
 Thumbs.db:encryptable
