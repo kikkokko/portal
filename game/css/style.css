@@ -799,37 +799,27 @@ input[type="checkbox"] {
     margin-left: 15px;
 }
 
-#page li:not(.list-style li, .menu li, table li, dl li) {
+#page li:not(.list-style_non li, .list-style_ol li, .menu li) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 2rem;
+    list-style-position: outside;
+    list-style: disc;
+}
+
+#page .list-style_non li {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 2rem;
     list-style: none;
     list-style-position: outside;
-    /* list-style: disc; */
 }
 
-#page table li,
-#page dl li {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 2rem;
-    list-style-position: outside;
-    list-style: disc;
-}
-
-#page .list-style ul li {
+#page .list-style_ol li {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 2rem;
-    list-style: disc;
-    list-style-position: outside;
-}
-
-#page .list-style ol li {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 2rem;
-    list-style: disc;
+    list-style: decimal;
     list-style-position: outside;
 }
 
@@ -936,7 +926,7 @@ input[type="checkbox"] {
 
 #page dt {
     /* width: 180px; */
-    width: 30%;
+    width: 20%;
     padding-right: 10px;
     padding-bottom: 5px;
     border-bottom: dashed 1px #999;
@@ -946,7 +936,7 @@ input[type="checkbox"] {
 
 #page dd {
     /* flex-basis: calc(100% - 180px); */
-    width: 70%;
+    width: 80%;
     padding-bottom: 5px;
     border-bottom: dashed 1px #999;
     margin-bottom: 10px;
