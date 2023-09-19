@@ -803,8 +803,9 @@ input[type="checkbox"] {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 2rem;
+    list-style: none;
     list-style-position: outside;
-    list-style: disc;
+    /* list-style: disc; */
 }
 
 #page table li,
@@ -819,6 +820,7 @@ input[type="checkbox"] {
 #page .list-style ul li {
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 2rem;
     list-style: disc;
     list-style-position: outside;
 }
@@ -827,7 +829,7 @@ input[type="checkbox"] {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 2rem;
-    list-style: decimal;
+    list-style: disc;
     list-style-position: outside;
 }
 
