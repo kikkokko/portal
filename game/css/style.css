@@ -850,6 +850,7 @@ input[type="checkbox"] {
     border: dashed 1px #999;
     padding: 5px;
     font-size: 1.4rem;
+    text-align:left;
 }
 
 .table-border_table td {
