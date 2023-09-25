@@ -744,6 +744,12 @@ input[type="checkbox"] {
     margin-left: 15px;
 }
 
+#page .serieslink {
+    display: block;
+    /* justify-content: space-between; */
+
+}
+
 /*----------
 ページメニュー
 ------------*/
