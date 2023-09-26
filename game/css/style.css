@@ -1484,6 +1484,51 @@ input[type="checkbox"] {
 }
 
 
+/*----------
+Aboutページ内メニュー
+------------*/
+
+#about nav {
+    margin-bottom: 150px;
+}
+
+#about .menu ul {
+    font-size: 1.6rem;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#about .menu li {
+    list-style: none;
+    text-align: center;
+    line-height: normal;
+}
+
+#about .menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 1.2rem;
+}
+
+#about .menu a:hover {
+    transition: all 0.2s;
+    background: #333;
+    color: #fff;
+}
+
+#about .menu li:hover {
+    background: #333;
+}
+
+/*----------
+Aboutページ内メニューおわり
+------------*/
+
 /*-------------------------------------------
         INDEX
         -------------------------------------------*/
