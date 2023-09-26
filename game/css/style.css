@@ -34,7 +34,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.link {
+.link a{
     text-decoration: underline;
 }
 
@@ -1362,7 +1362,7 @@ input[type="checkbox"] {
 #about .subtitle {
     /*---h4---*/
     font-size: 2.3rem;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 #about .subsubtitle {
@@ -1463,6 +1463,11 @@ input[type="checkbox"] {
 /*---dlおわり----*/
 
 
+#about .link-style a{
+    font-weight: bold;
+    text-decoration:underline;
+}
+
 #about .link-blank {
     font-weight: bold;
 }
@@ -1470,10 +1475,11 @@ input[type="checkbox"] {
 #about .link-blank::after {
     content: "";
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
     background: url(/game/img/svg/bx-link-external-666.svg);
-    background-size: 1.5rem;
+    background-size: 1.3rem;
+    margin-left: 3px;
     margin-right: 3px;
 }
 
