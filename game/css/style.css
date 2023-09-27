@@ -49,6 +49,7 @@ li {
 }
 
 
+
 /*
 コンテンツのワイドビュー用
 */
@@ -103,8 +104,11 @@ li {
     align-items: center;
     margin: 0 auto;
 
+    z-index: 1;
+
     position: sticky;
     top: 0;
+
 }
 
 #list-header {
@@ -296,6 +300,15 @@ s .hamburger_list {
 
 -------------------------------------------*/
 
+#list a img {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#list a img:hover {
+    transform: scale(1.05);
+}
 
 /*-------------------------------------------
 ゲームリストのメニュー
@@ -750,6 +763,16 @@ input[type="checkbox"] {
 
 }
 
+#summary a img {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#summary a img:hover {
+    transform: scale(1.07);
+}
+
 /*----------
 ページメニュー
 ------------*/
@@ -837,9 +860,6 @@ input[type="checkbox"] {
     list-style-position: inside;
 }
 
-#character {
-    font-size: 1.4rem;
-}
 
 /*-------テーブルのボーダーが田-----*/
 .table-border_table {
@@ -856,6 +876,13 @@ input[type="checkbox"] {
     border: dashed 1px #999;
     padding: 5px;
     font-size: 1.4rem;
+}
+
+thead th:not(tbody th){
+    text-align: center;
+}
+
+tbody th:not(thead th){
     text-align: left;
 }
 
