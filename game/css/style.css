@@ -1452,6 +1452,10 @@ tbody th:not(thead th){
     list-style-position: outside;
 }
 
+#aboutus img {
+    width: 400px;
+    height: auto;
+}
 
 
 /*---dl----*/
