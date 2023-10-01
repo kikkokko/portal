@@ -34,7 +34,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.link a{
+.link a {
     text-decoration: underline;
 }
 
@@ -878,11 +878,11 @@ input[type="checkbox"] {
     font-size: 1.4rem;
 }
 
-thead th:not(tbody th){
+thead th:not(tbody th) {
     text-align: center;
 }
 
-tbody th:not(thead th){
+tbody th:not(thead th) {
     text-align: left;
 }
 
@@ -995,6 +995,7 @@ tbody th:not(thead th){
 
 
 #memo iframe {
+    /* エクセル */
     width: 100%;
     height: 90%;
     border: solid 1px #333;
@@ -1079,10 +1080,19 @@ tbody th:not(thead th){
 
 
 /*--------------------------------------------------------
+
 スマホ、タブレット用
 横幅650pxで切り替え
+
 --------------------------------------------------------*/
 @media screen and (max-width: 650px) {
+
+    /*コンテンツ幅を設定するための共通クラス*/
+    #page.container {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 
     /*---ゲームタイトル h2----*/
@@ -1168,6 +1178,16 @@ tbody th:not(thead th){
 
     .indent {
         margin-left: 3px;
+    }
+
+    #memo iframe {
+        /* エクセル */
+        width: 100%;
+        height: 50%;
+        border: solid 1px #333;
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 3px;
     }
 
 
@@ -1494,9 +1514,9 @@ tbody th:not(thead th){
 /*---dlおわり----*/
 
 
-#about .link-style a{
+#about .link-style a {
     font-weight: bold;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 #about .link-blank {
