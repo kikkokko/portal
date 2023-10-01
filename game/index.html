@@ -112,7 +112,7 @@
             <ul>
                 <li><a href="#now">プレイ進行中のゲーム</a></li>
                 <li><a href="#gamelist">ゲーム一覧</a></li>
-                <li><a href="#else">その他ゲーム一覧</a></li>
+                <li><a href="#onlinegame">オンラインゲーム一覧</a></li>
                 <li><a href="#free">フリーゲーム一覧</a></li>
             </ul>
         </nav>
@@ -181,6 +181,8 @@
                 <input type="radio" name="categories" id="Nothing" value="Nothing"><!--クリアの概念がない-->
                 <input type="radio" name="categories" id="Dont" value="Dont"><!--クリア未達成-->
 
+                <input type="radio" name="categories" id="Consumer" value="Consumer"><!--コンシューマーゲーム-->
+
                 <input type="radio" name="categories" id="SFC" value="SFC"><!--スーファミ-->
                 <input type="radio" name="categories" id="PS" value="PS"><!--PS-->
                 <input type="radio" name="categories" id="PS_archive" value="PS_archive"><!--PSアーカイブス-->
@@ -188,7 +190,7 @@
                 <input type="radio" name="categories" id="PSP" value="PSP"><!--PSP-->
                 <input type="radio" name="categories" id="DS" value="DS"><!--DSと3DS-->
                 <input type="radio" name="categories" id="Steam" value="Steam"><!--Steamにある-->
-                <input type="radio" name="categories" id="Else" value="Else"><!--その他プラットフォーム-->
+                <input type="radio" name="categories" id="Onlinegame" value="Onlinegame"><!--その他プラットフォーム-->
                 <input type="radio" name="categories" id="Free" value="Free"><!--フリーゲーム-->
 
                 <!-- フィルタ（ラベル） -->
@@ -225,14 +227,15 @@
                     <dt><img src="/game/img/svg/bx-purchase-tag-alt.svg" class="svg-icon-label"></dt>
                     <dd>
                         <ol>
+                            <!-- <li><label for="Consumer">コンシューマーゲーム</label></li> -->
                             <li><label for="PS">PS</label></li>
                             <li><label for="PS_archive">PSアーカイブス</label></li>
                             <li><label for="PS2">PS2 </label></li>
                             <li><label for="PSP">PSP</label></li>
                             <li><label for="DS">DS・3DS</label></li>
                             <li><label for="SFC">スーファミ</label></li>
-                            <li><label for="Else">その他</label></li>
-                            <!-- <li><label for="Steam">Steam</label></li> -->
+                            <li><label for="Onlinegame">オンラインゲーム</label></li>
+                            <li><label for="Steam">Steam</label></li>
                             <li><label for="Free">フリーゲーム</label></li>
                         </ol>
                     </dd>
@@ -948,6 +951,15 @@
                                 <p class="tag"><a href="#PSP">PSP</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
                             </li>
 
+                            <li class="target" data-category="DS Off Clear">
+                                <a href="/game/ygo-dm-saikyocard-battle/">
+                                    <img src="/game/ygo-dm-saikyocard-battle/package.png">
+                                    <h3 class="game-title">遊戯王DM 最強カードバトル</h3>
+                                </a>
+                                <p class="series">遊戯王シリーズ</p>
+                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
+                            </li>
+
                             <li class="target" data-category="PS2 Off Clear">
                                 <a href="/game/yakuza/">
                                     <img src="/game/yakuza/package.png">
@@ -1022,27 +1034,18 @@
 
                     </section>
 
-                    <!-- contents その他ゲーム -->
-                    <section id="else" class="else-games">
-                        <h2 class="section-title">その他ゲーム</h2>
+                    <!-- contents Steam -->
+                    <section id="Steam" class="Steam">
+                        <h2 class="section-title">Steam</h2>
                         <ul class="game-list">
 
-                            <li class="target" data-category="Steam On Nothing">
+                            <li class="target" data-category="Onlinegame Steam On Nothing">
                                 <a href="/game/granado-espada/">
                                     <img src="/game/granado-espada/package.png">
                                     <h3 class="game-title">Granado Espada</h3>
                                 </a>
                                 <p class="series"></p>
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア条件なし">クリア条件なし</a></p>
-                            </li>
-
-                            <li class="target" data-category="Else Off Nothing">
-                                <a href="/game/jan-ryu-mon/">
-                                    <img src="/game/jan-ryu-mon/package.jpg">
-                                    <h3 class="game-title">雀龍門</h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
                             </li>
 
                             <li class="target" data-category="Now Steam On Nothing">
@@ -1053,8 +1056,26 @@
                                 <p class="series"></p>
                                 <p class="tag"><a href="#現在プレイ中">現在プレイ中</a><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#EDなし">EDなし</a></p>
                             </li>
+                        </ul>
+                    </section>
+                    <!-- contents Steam 終わり-->
 
-                            <li class="target" data-category="Else Off Nothing">
+
+                    <!-- contents オンラインゲーム -->
+                    <section id="onlinegame" class="online-games">
+                        <h2 class="section-title">その他ゲーム</h2>
+                        <ul class="game-list">
+
+                            <li class="target" data-category="Onlinegame Off Nothing">
+                                <a href="/game/jan-ryu-mon/">
+                                    <img src="/game/jan-ryu-mon/package.jpg">
+                                    <h3 class="game-title">雀龍門</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
+                            </li>
+
+                            <li class="target" data-category="Onlinegame Off Nothing">
                                 <a href="/game/animal-crossing-pocket/">
                                     <img src="/game/animal-crossing-pocket/package.jpg">
                                     <h3 class="game-title">どうぶつの森<span>ポケットキャンプ</span></h3>
@@ -1063,7 +1084,7 @@
                                 <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
                             </li>
 
-                            <li class="target" data-category="Else Off Nothing">
+                            <li class="target" data-category="Onlinegame Off Nothing">
                                 <a href="/game/megido72/">
                                     <img src="/game/megido72/package.png">
                                     <h3 class="game-title">メギド72</h3>
@@ -1072,7 +1093,7 @@
                                 <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
                             </li>
 
-                            <li class="target" data-category="Else Off Nothing">
+                            <li class="target" data-category="Onlinegame Off Nothing">
                                 <a href="/game/fgo/">
                                     <img src="/game/fgo/package.png">
                                     <h3 class="game-title">Fate Grand Order</h3>
@@ -1081,16 +1102,7 @@
                                 <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
                             </li>
 
-                            <li class="target" data-category="DS Off Clear">
-                                <a href="/game/ygo-dm-saikyocard-battle/">
-                                    <img src="/game/ygo-dm-saikyocard-battle/package.png">
-                                    <h3 class="game-title">遊戯王DM 最強カードバトル</h3>
-                                </a>
-                                <p class="series">遊戯王シリーズ</p>
-                                <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
-                            </li>
-
-                            <li class="target" data-category="Steam Off Nothing">
+                            <li class="target" data-category="Onlinegame Steam Off Nothing">
                                 <a href="/game/ygo-duel-links/">
                                     <img src="/game/ygo-duel-links/package.png">
                                     <h3 class="game-title">遊戯王デュエルリンクス</h3>
@@ -1100,7 +1112,7 @@
                             </li>
                         </ul>
                     </section>
-                    <!-- contents その他ゲーム 終わり-->
+                    <!-- contents オンラインゲーム 終わり-->
 
 
 

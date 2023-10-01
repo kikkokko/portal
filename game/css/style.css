@@ -530,13 +530,15 @@ input[type="checkbox"] {
 [value="Part"]:checked~.targets .target:not([data-category~="Part"]),
 [value="Stop"]:checked~.targets .target:not([data-category~="Stop"]),
 [value="Nothing"]:checked~.targets .target:not([data-category~="Nothing"]),
+[value="Consumer"]:checked~.targets .target:not([data-category~="consumer"]).target:not([data-category~="SFC"]).target:not([data-category~="PS"]).target:not([data-category~="PS_archive"]).target:not([data-category~="PS2"]).target:not([data-category~="PSP"]).target:not([data-category~="DS"]),
 [value="SFC"]:checked~.targets .target:not([data-category~="SFC"]),
 [value="PS"]:checked~.targets .target:not([data-category~="PS"]),
 [value="PS_archive"]:checked~.targets .target:not([data-category~="PS_archive"]),
 [value="PS2"]:checked~.targets .target:not([data-category~="PS2"]),
 [value="PSP"]:checked~.targets .target:not([data-category~="PSP"]),
 [value="DS"]:checked~.targets .target:not([data-category~="DS"]),
-[value="Else"]:checked~.targets .target:not([data-category~="Else"]).target:not([data-category~="Steam"]),
+[value="Steam"]:checked~.targets .target:not([data-category~="Steam"]),
+[value="Onlinegame"]:checked~.targets .target:not([data-category~="Onlinegame"]),
 [value="Free"]:checked~.targets .target:not([data-category~="Free"]) {
     display: none;
 }
