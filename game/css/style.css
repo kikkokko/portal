@@ -1903,8 +1903,20 @@ html {
     -------------------------------------------*/
 #footer {
     font-size: 1rem;
-    padding: 15px 0;
+    padding: 15px;
     text-align: center;
+
+    /* height: 50px; */
+    /* background-color: #F4C7C3; */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    z-index: 1;
+
+    position: sticky;
+    bottom: 0; */
 }
 
 

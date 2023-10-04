@@ -139,44 +139,6 @@ function hide_or_show(element, bool) {
 }
 
 // ------------------------------------------------------------
-// Twitchのsrcを自動セット
-// ------------------------------------------------------------
-{
-	const twitch = ID("embed-twitch");
-	twitch.src = "https://player.twitch.tv/?autoplay=false&collection=KNBEdVGxghUfMg&parent=" + location.hostname
-}
-
-// ------------------------------------------------------------
-// TumblrのNEWS記事取得
-// 参考: https://shirasaka.tv/2539
-// ------------------------------------------------------------
-function getTumblr() {
-	const SHOW_NUMBER = 3; // 表示させたい最新記事数
-
-	let title, body, url, tag, gmt, data, d, mon, day;
-	let post = tumblr_api_read["posts"];
-	let output = "";
-	for (let i=0; i < SHOW_NUMBER; i++) {
-		tag = post[i]["tags"];
-		if (tag === undefined) {
-			tag = "-";
-		}
-		title = post[i]["regular-title"];
-		body = post[i]["regular-body"]
-		url = post[i]["url"];
-		gmt = post[i]["date-gmt"];
-		d = new Date(gmt);
-		mon = ("0" + (d.getMonth() + 1)).slice(-2);
-		day = ("0" + d.getDate()).slice(-2);
-		data = d.getFullYear() + "/" + mon + "/" + day;
-		output += `<dt class="mb10"><a href="${url}" target="_blank">${data}</a><br><div class="font-smallsmall font-white">#${tag}</div></dt><dd class="mb10 marker-link"><a href="${url}" target="_blank"><span class="font-bold">${title} </span></a><br><div class="mb10 font-small indent u_readmore">${body}</div></dd>`;
-	}
-	document.getElementById("tumblr-news").innerHTML = output;
-}
-getTumblr();
-
-
-// ------------------------------------------------------------
 // アートワークをモーダルスライド表示
 // ------------------------------------------------------------
 function artworkSlider() {
@@ -292,6 +254,47 @@ function artworkSlider() {
 
 }
 artworkSlider();
+
+
+// ------------------------------------------------------------
+// Twitchのsrcを自動セット
+// ------------------------------------------------------------
+{
+	const twitch = ID("embed-twitch");
+	twitch.src = "https://player.twitch.tv/?autoplay=false&collection=KNBEdVGxghUfMg&parent=" + location.hostname
+}
+
+// ------------------------------------------------------------
+// TumblrのNEWS記事取得
+// 参考: https://shirasaka.tv/2539
+// ------------------------------------------------------------
+function getTumblr() {
+	const SHOW_NUMBER = 3; // 表示させたい最新記事数
+
+	let title, body, url, tag, gmt, data, d, mon, day;
+	let post = tumblr_api_read["posts"];
+	let output = "";
+	for (let i=0; i < SHOW_NUMBER; i++) {
+		tag = post[i]["tags"];
+		if (tag === undefined) {
+			tag = "-";
+		}
+		title = post[i]["regular-title"];
+		body = post[i]["regular-body"]
+		url = post[i]["url"];
+		gmt = post[i]["date-gmt"];
+		d = new Date(gmt);
+		mon = ("0" + (d.getMonth() + 1)).slice(-2);
+		day = ("0" + d.getDate()).slice(-2);
+		data = d.getFullYear() + "/" + mon + "/" + day;
+		output += `<dt class="mb10"><a href="${url}" target="_blank">${data}</a><br><div class="font-smallsmall font-white">#${tag}</div></dt><dd class="mb10 marker-link"><a href="${url}" target="_blank"><span class="font-bold">${title} </span></a><br><div class="mb10 font-small indent u_readmore">${body}</div></dd>`;
+	}
+	document.getElementById("tumblr-news").innerHTML = output;
+}
+getTumblr();
+
+
+
 
 
 
