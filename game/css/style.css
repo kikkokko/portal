@@ -750,6 +750,12 @@ input[type="checkbox"] {
     grid-gap: 2em;
 }
 
+#Page .page-chest200 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2em;
+}
+
 #page p {
     margin-left: 15px;
     margin-bottom: 15px;
@@ -824,7 +830,7 @@ input[type="checkbox"] {
 リストとか
 ----------------*/
 
-#page ul {
+#page ul, #page ol {
     margin-top: 5px;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -913,7 +919,7 @@ tbody th:not(thead th) {
 }
 
 .table-border_line th {
-    border: dashed 1px #999;
+    border-bottom: dashed 1px #999;
     padding: 5px;
     font-size: 1.4rem;
     min-width: 70px;
@@ -1087,7 +1093,7 @@ tbody th:not(thead th) {
 横幅650pxで切り替え
 
 --------------------------------------------------------*/
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 
     /*コンテンツ幅を設定するための共通クラス*/
     #page.container {
@@ -1095,7 +1101,6 @@ tbody th:not(thead th) {
         margin-left: auto;
         margin-right: auto;
     }
-
 
     /*---ゲームタイトル h2----*/
     #page .game-title {
@@ -1192,6 +1197,9 @@ tbody th:not(thead th) {
         padding-bottom: 3px;
     }
 
+    .flex {
+        flex-wrap: wrap;
+    }
 
     /*----ギャラリー----*/
     #gallery img {
@@ -1839,7 +1847,9 @@ Aboutページ内メニューおわり
     margin-bottom: 60px;
 }
 
-
+.gap50 {
+    gap: 50px;
+}
 
 
 /*--TOPに戻るボタン
@@ -1927,7 +1937,7 @@ html {
 スマホ、タブレット用
 横幅1024pxで切り替え
 --------------------------------------------------------*/
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 
     /*-------------------------------------------
         ヘッダー
@@ -1990,6 +2000,7 @@ html {
         margin-bottom: 20px;
     }
 
+
     /*
   vertical-align: top;
   画像の下にできる隙間を消す
@@ -2020,7 +2031,6 @@ html {
         padding-right: pxvw(10, 375);
     }
 
-
     .inner {
         padding: 0 20px;
     }
@@ -2032,7 +2042,6 @@ html {
     .inner {
         padding: 0 20px;
     }
-
 
     /*---dl----*/
     #page dl {
