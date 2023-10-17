@@ -111,7 +111,7 @@
 
             <section id="summary">
                 <div>
-                    <a href="https://store.steampowered.com/app/413150/Stardew_Valley/?l=japanese" target="_blank"><img src="package.png" width="100%"></a>
+                    <a href="https://store.steampowered.com/app/413150/Stardew_Valley/?l=japanese" target="_blank"><img src="/game/stardew-valley/package.png" width="100%"></a>
                     <p class="series"></p>
                     <p class="tag"><a href="#現在プレイ中">現在プレイ中</a><a href="#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア条件なし">クリア条件なし</a></p>
                 </div>
@@ -138,7 +138,7 @@
                     <li><a href="#character">登場人物</a></li>
                     <!--<li><a href="#story">お話の内容まとめ</a></li>-->
                     <!--<li><a href="#data">ゲームデータ</a></li>-->
-                    <!--<li><a href="#gallery">ギャラリー</a></li>-->
+                    <li><a href="#gallery">ギャラリー</a></li>
                     <li><a href="#disqus_thread">コメントボード</a></li>
                 </ul>
             </nav>
@@ -189,7 +189,7 @@
                 <h3 class="section-title">クリア感想</h3>
                 <div class="page-chest">
                     <div>
-                        <img src="clear.jpg" alt="" widtd="100%">
+                        <img src="/game/stardew-valley/img/clear.png" alt="" widtd="100%">
                     </div>
                     <div>
                         <p>
@@ -201,13 +201,26 @@
             -->
 
             <section id="memo">
+
                 <h3 class="section-title">プレイメモ</h3>
+
+                <nav class="menu2">
+                    <ul>
+                        <li><a href="#daiku">大工さんで建設</a></li>
+                        <li><a href="#craft">クラフトアイテム</a></li>
+                        <li><a href="#farm">農業</a></li>
+                        <li><a href="#mineral">鉱物</a></li>
+                        <li><a href="#shop">お店</a></li>
+                        <li><a href="#event">イベント</a></li>
+                    </ul>
+                </nav>
+
                 <section>
                     <iframe class="excel" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRW-0-v1gXqX6G3-eYPKBsy7M8ZQ94mXN1XQ_M4ImsNxKnqaa6XWdIDvRf2FmWKNsTvD4ZhkqoTBqZt/pubhtml?widget=false&amp;headers=false&amp;chrome=true" widtd="100%" height="100%" frameborder="0"></iframe>
                     <a class="link-blank rightside" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRW-0-v1gXqX6G3-eYPKBsy7M8ZQ94mXN1XQ_M4ImsNxKnqaa6XWdIDvRf2FmWKNsTvD4ZhkqoTBqZt/pubhtml" target="_blank">別窓で開く</a>
                 </section>
 
-                <section>
+                <section id="daiku">
                     <h4 class="subtitle">大工さんで建設</h4>
 
                     <section>
@@ -297,9 +310,9 @@
                                 </tr>
                                 <tr>
                                     <th>馬小屋</th>
-                                    <td>馬さんに乗れるようになる</td>
+                                    <td>お馬さんに乗れるようになる</td>
                                     <td>
-                                        金：10,000、石：500、精錬クリスタル：10、イリジウムのべ棒1
+                                        金：10,000、硬い木：100、鉄ののべ棒：5
                                     </td>
                                 </tr>
                                 <tr>
@@ -352,7 +365,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section id="craft">
                     <h4 class="subtitle">クラフトアイテム</h4>
                     <table class="table-border_line">
                         <tbody>
@@ -390,7 +403,7 @@
                     </table>
                 </section>
 
-                <section>
+                <section id="farm">
                     <h4 class="subtitle">農業</h4>
                     <section>
                         <h5 class="subsubtitle">道具</h5>
@@ -507,8 +520,8 @@
                         <h5 class="subsubtitle">果樹</h5>
                         <ul>
                             <li>何もない3x3マスの、耕していない土地の真ん中にしか植えられない。</li>
-                            <li>3x3の範囲を空けられた状態でないと成長しない。</li>
-                            <li>どの季節でも育ち、成長に28日。シーズン中1日1個ずつ実り、水やり不要。何もない3x3マスの土地の真ん中に植える必要がある。</li>
+                            <li>3x3の範囲を空けられた状態でないと成長しない。2本並べるには隣接2マスの空きが必要</li>
+                            <li>どの季節でも育ち、成長に28日。シーズン中1日1個ずつ実り、水やり不要。</li>
                         </ul>
 
                         <div class="flex gap50 indent">
@@ -522,10 +535,10 @@
                             <div>
                                 <h6 class="subsubsubtitle">夏</h6>
                                 <ul>
-                                    <li>バナナの木</li>
-                                    <li>マンゴーの木</li>
                                     <li>オレンジの木</li>
                                     <li>モモの木</li>
+                                    <!-- <li>バナナの木</li>
+                                    <li>マンゴーの木</li> -->
                                 </ul>
                             </div>
                             <div>
@@ -539,7 +552,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section id="mineral">
                     <h4 class="subtitle">鉱物</h4>
                     <dl>
                         <dt>銅鉱石</dt>
@@ -556,21 +569,84 @@
                     </dl>
                 </section>
 
-                <section>
+                <section id="shop">
+                    <h4 class="subtitle">お店</h4>
+                    <dl>
+                        <dt>大工さん</dt>
+                        <dd>
+                            09:00～17:00<br>
+                            定休日：火曜日、金曜日16時以降
+                            (火曜日は9:40より前、
+                            ロビンがレジを通るときに利用可能)
+                        </dd>
+
+                        <dt>ピエール商店</dt>
+                        <dd>
+                            09:00～17:00<br>
+                            定休日：水曜日
+                        </dd>
+
+                        <dt>マーニーの牧場</dt>
+                        <dd>
+                            09:00～16:00<br>
+                            定休日：月曜日、火曜日
+                        </dd>
+
+                        <dt>鍛冶屋</dt>
+                        <dd>09:00～16:00</dd>
+
+                        <dt>博物館</dt>
+                        <dd>08:00～16:00</dd>
+
+                        <dt>酒場</dt>
+                        <dd>12:00～0:00</dd>
+
+                        <dt>冒険者ギルド</dt>
+                        <dd>14:00～22:00</dd>
+
+                        <dt>釣具店</dt>
+                        <dd>09:00～17:00<br>
+                            定休日：雨以外の土曜日
+                        </dd>
+
+                        <dt>診療所</dt>
+                        <dd>09:00～15:00</dd>
+
+                        <dt>Jojaマート</dt>
+                        <dd>09:00～23:00</dd>
+
+                        <dt>行商人</dt>
+                        <dd>金曜日・日曜日の06:00～20:00</dd>
+
+                    </dl>
+
+                </section>
+
+                <section id="event">
                     <h4 class="subtitle">イベント</h4>
                     <h5 class="subsubtitle">春</h5>
                     <dl>
                         <dt>エッグフェスティバル</dt>
-                        <dd>13日、午前9時～午後2時、ペリカンタウン</dd>
+                        <dd>
+                            13日、午前9時～午後2時、ペリカンタウン<br>
+                            タマゴ9個以上発見で優勝できる
+                        </dd>
 
                         <dt>フラワーダンス</dt>
-                        <dd>24日、午前9時～午後2時、シンダーサップの森</dd>
+                        <dd>
+                            24日、午前9時～午後2時、シンダーサップの森<br>
+                            友好度が4ハート以上の結婚相手候補とダンスできる
+                        </dd>
                     </dl>
 
                     <h5 class="subsubtitle">夏</h5>
                     <dl>
                         <dt>ルアウパーティー</dt>
-                        <dd>11日、午前9時～午後2時、ビーチ</dd>
+                        <dd>
+                            11日、午前9時～午後2時、ビーチ<br>
+                            ゴールド品質のタマゴやヤギミルクを持っていくと良い<br>
+                            ※スープ評価によって住民の好感度増減あり
+                        </dd>
 
                         <dt>ゲッコウクラゲのダンス</dt>
                         <dd>28日、午後10時～午前0時、ビーチ</dd>
@@ -579,7 +655,10 @@
                     <h5 class="subsubtitle">秋</h5>
                     <dl>
                         <dt>スターデューバレーまつり</dt>
-                        <dd>16日、午前9時～午後3時、</dd>
+                        <dd>
+                            16日、午前9時～午後3時、ペリカンタウン<br>
+                            畜産物、加工品、料理、魚、採取、果実、鉱石、野菜の8つのカテゴリー中6つは埋めると良い
+                        </dd>
 
                         <dt>スピリットイブ</dt>
                         <dd>27日、午前10時～午後11時50分、ペリカンタウン</dd>
@@ -588,13 +667,19 @@
                     <h5 class="subsubtitle">冬</h5>
                     <dl>
                         <dt>氷まつり</dt>
-                        <dd>8日、午前9時～午後2時、シンダーサップの森</dd>
+                        <dd>
+                            8日、午前9時～午後2時、シンダーサップの森<br>
+                            5匹以上釣ると優勝できる
+                        </dd>
 
                         <dt>夜の市</dt>
                         <dd>15日～17日、午後5時～午前2時、ビーチ</dd>
 
                         <dt>冬星祭</dt>
-                        <dd>25日、午前9時～午後2時、ペリカンタウン</dd>
+                        <dd>
+                            25日、午前9時～午後2時、ペリカンタウン<br>
+                            村人にプレゼントを用意する必要がある
+                        </dd>
                     </dl>
                 </section>
             </section>
@@ -635,12 +720,14 @@
                             <td></td>
                         </tr>
                         <tr>
+
                             <th>セバスチャン</th>
                             <td>◯</td>
                             <td>冬の10日</td>
-                            <td></td>
+                            <td>イエティのなみだ、刺し身</td>
                         </tr>
                         <tr>
+
                             <th>マル</th>
                             <td>◯</td>
                             <td>夏の10日</td>
@@ -662,9 +749,10 @@
                             <th>キャロライン</th>
                             <td></td>
                             <td>冬の7日</td>
-                            <td></td>
+                            <td>フィッシュタコス</td>
                         </tr>
                         <tr>
+
                             <th>アビゲイル</th>
                             <td>◯</td>
                             <td>秋の13日</td>
@@ -691,6 +779,98 @@
                             <th>ジャス</th>
                             <td></td>
                             <td>夏の4日</td>
+                            <td>フェアリーローズ、プラムのプディング</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2"><strong>ウィロー通り2番地</strong></td>
+                            <th>エミリー</th>
+                            <td>◯</td>
+                            <td>春の27日</td>
+                            <td>アクアマリン、宝石、ウール</td>
+                        </tr>
+                        <tr>
+                            <th>ヘイリー</th>
+                            <td>◯</td>
+                            <td>春の14日</td>
+                            <td>ピンクケーキ、ヒマワリ</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="3"><strong>リバー通り1番地</strong></td>
+                            <th>アレックス</th>
+                            <td>◯</td>
+                            <td>夏の13日</td>
+                            <td>サーモンディナー</td>
+                        </tr>
+                        <tr>
+                            <th>エブリン</th>
+                            <td></td>
+                            <td>冬の20日</td>
+                            <td>ビーツ、チューリップ</td>
+                        </tr>
+                        <tr>
+                            <th>ジョージ</th>
+                            <td></td>
+                            <td>秋の24日</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2"><strong>トレーラーハウス</strong></td>
+                            <th>パム</th>
+                            <td></td>
+                            <td>春の18日</td>
+                            <td>パースニップ、サツマイモのミツがけ</td>
+                        </tr>
+                        <tr>
+                            <th>ペニー</th>
+                            <td>◯</td>
+                            <td>秋の2日</td>
+                            <td>エメラルド、ポピー</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="4"><strong>ウィロー通り1番地</strong></td>
+                            <th>ジョディ</th>
+                            <td></td>
+                            <td>秋の11日</td>
+                            <td>バスのサクサク揚げ、パンケーキ</td>
+                        </tr>
+                        <tr>
+                            <th>ケント</th>
+                            <td></td>
+                            <td></td>
+                            <td>リゾット、焼きヘーゼルナッツ</td>
+                        </tr>
+                        <tr>
+                            <th>サム</th>
+                            <td>◯</td>
+                            <td>夏の17日</td>
+                            <td>サボテン、メープルバー、ピザ</td>
+                        </tr>
+                        <tr>
+                            <th>ヴィンセント</th>
+                            <td></td>
+                            <td>春の10日</td>
+                            <td>ピンクケーキ、ブドウ、クランベリーキャンディ</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>牧場下のコテージ</strong></td>
+                            <th>リア</th>
+                            <td>◯</td>
+                            <td>冬の23日</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>海岸の小屋</strong><br>
+                            </td>
+                            <th>エリオット</th>
+                            <td>◯</td>
+                            <td>秋の5日</td>
                             <td></td>
                         </tr>
 
@@ -707,18 +887,7 @@
 
                         <tr>
                             <td>
-                                <strong>博物館</strong><br>
-                                08:00～16:00
-                            </td>
-                            <th>ギュンター</th>
-                            <td></td>
-                            <td>―</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <strong>バー</strong><br>
+                                <strong>酒場</strong><br>
                                 12:00～0:00
                             </td>
                             <th>ガス</th>
@@ -728,30 +897,22 @@
                         </tr>
 
                         <tr>
-                            <td rowspan="2">
-                                <strong>冒険者ギルド</strong><br>
-                                14:00～22:00
+                            <td>
+                                <strong>魔術師の塔</strong>
                             </td>
-                            <th>マーロン</th>
+                            <th>魔術師</th>
                             <td></td>
-                            <td>―</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>ギル</th>
-                            <td></td>
-                            <td>―</td>
+                            <td>冬の17日</td>
                             <td></td>
                         </tr>
 
                         <tr>
                             <td>
-                                <strong>行商人</strong><br>
-                                金曜日・日曜日の06:00～20:00
+                                <strong>鉱山近くのテント</strong>
                             </td>
-                            <th>行商人</th>
+                            <th>ライナス</th>
                             <td></td>
-                            <td>―</td>
+                            <td>冬の16日</td>
                             <td></td>
                         </tr>
 
@@ -779,6 +940,42 @@
                         </tr>
 
                         <tr>
+                            <td><strong>町長の屋敷</strong></td>
+                            <th>ルイス</th>
+                            <td></td>
+                            <td>春の7日</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">
+                                <strong>冒険者ギルド</strong><br>
+                                14:00～22:00
+                            </td>
+                            <th>マーロン</th>
+                            <td></td>
+                            <td>―</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>ギル</th>
+                            <td></td>
+                            <td>―</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>博物館</strong><br>
+                                08:00～16:00
+                            </td>
+                            <th>ギュンター</th>
+                            <td></td>
+                            <td>―</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
                             <td>
                                 <strong>Jojaマート</strong><br>
                                 09:00～23:00
@@ -790,124 +987,16 @@
                         </tr>
 
                         <tr>
-                            <td rowspan="2"><strong>ウィロー通り2番地</strong></td>
-                            <th>エミリー</th>
-                            <td>◯</td>
-                            <td>春の27日</td>
-                            <td>アクアマリン</td>
-                        </tr>
-                        <tr>
-                            <th>ヘイリー</th>
-                            <td>◯</td>
-                            <td>春の14日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td rowspan="3"><strong>リバー通り1番地</strong></td>
-                            <th>アレックス</th>
-                            <td>◯</td>
-                            <td>夏の13日</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>エブリン</th>
-                            <td></td>
-                            <td>冬の20日</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>ジョージ</th>
-                            <td></td>
-                            <td>秋の24日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td rowspan="2"><strong>トレーラーハウス</strong></td>
-                            <th>パム</th>
-                            <td></td>
-                            <td>春の18日</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>ペニー</th>
-                            <td>◯</td>
-                            <td>秋の2日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td rowspan="3"><strong>ウィロー通り1番地</strong></td>
-                            <th>ジョディ</th>
-                            <td></td>
-                            <td>秋の11日</td>
-                            <td></td>
-                        </tr>
-                        <!-- <tr>
-                            <th>ケント</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
-                        <tr>
-                            <th>サム</th>
-                            <td>◯</td>
-                            <td>夏の17日</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>ヴィンセント</th>
-                            <td></td>
-                            <td>春の10日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>牧場下のコテージ</strong></td>
-                            <th>リア</th>
-                            <td>◯</td>
-                            <td>冬の23日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
                             <td>
-                                <strong>海岸の小屋</strong><br>
+                                <strong>行商人</strong><br>
+                                金曜日・日曜日の06:00～20:00
                             </td>
-                            <th>エリオット</th>
-                            <td>◯</td>
-                            <td>秋の5日</td>
+                            <th>行商人</th>
+                            <td></td>
+                            <td>―</td>
                             <td></td>
                         </tr>
 
-                        <tr>
-                            <td><strong>町長の屋敷</strong></td>
-                            <th>ルイス</th>
-                            <td></td>
-                            <td>春の7日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <strong>魔術師の塔</strong>
-                            </td>
-                            <th>魔術師</th>
-                            <td></td>
-                            <td>冬の17日</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <strong>鉱山近くのテント</strong>
-                            </td>
-                            <th>ライナス</th>
-                            <td></td>
-                            <td>冬の16日</td>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
 
@@ -956,21 +1045,49 @@
             </section>
             -->
 
-            <!--
+
             <section id="gallery">
                 <h3 class="section-title">ギャラリー</h3>
                 <div>
+                    <section class="gallery-container_large">
+                        <img src="/game/stardew-valley/img/01.png" alt="">
+                        <img src="/game/stardew-valley/img/02.jpg" alt="">
+                        <img src="/game/stardew-valley/img/03.jpg" alt="">
+                        <img src="/game/stardew-valley/img/04.jpg" alt="">
+                        <img src="/game/stardew-valley/img/05.jpg" alt="">
+                    </section>
+
                     <section>
-                        <img src="01.png" alt="">
-                        <img src="02.png" alt="">
-                        <img src="03.png" alt="">
-                        <img src="04.png" alt="">
+                        <h4 class="subtitle">季節イベント</h4>
+                        <div class="gallery-container_large">
+                            <img src="/game/stardew-valley/img/event/s13.jpg" alt="エッグハント">
+                            <img src="/game/stardew-valley/img/event/s28.jpg" alt="夜の市">
+                            <img src="/game/stardew-valley/img/event/w15.png" alt="夜の市">
+                            <img src="/game/stardew-valley/img/event/w15m1.png" alt="夜の市 マーメイドショー">
+                            <img src="/game/stardew-valley/img/event/w15m2.png" alt="夜の市 マーメイドショー">
+                            <img src="/game/stardew-valley/img/event/w15m3.png" alt="夜の市 マーメイドショー">
+                            <img src="/game/stardew-valley/img/event/w15m4.png" alt="夜の市 マーメイドショー">
+                            <img src="/game/stardew-valley/img/event/w25.jpg" alt="冬星祭">
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 class="subtitle">ジュニモ</h4>
+                        <div class="gallery-container_large">
+                            <img src="/game/stardew-valley/img/junimo/01.png">
+                            <img src="/game/stardew-valley/img/junimo/02.jpg">
+                            <img src="/game/stardew-valley/img/junimo/bridge1.jpg">
+                            <img src="/game/stardew-valley/img/junimo/bridge2.jpg">
+                            <img src="/game/stardew-valley/img/junimo/bridge3.jpg">
+                            <img src="/game/stardew-valley/img/junimo/bridge4.jpg">
+
+                        </div>
                     </section>
 
                 </div>
 
             </section>
-            -->
+
 
         </article>
 
