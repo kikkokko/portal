@@ -458,13 +458,13 @@ input[type="radio"] {
     left: -9999px;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
     position: absolute;
     left: -9999px;
-}
-
+} */
 
 /* 以下はラベルのスタイル */
+
 .label label {
     display: flex;
     flex-wrap: wrap;
@@ -480,7 +480,7 @@ input[type="checkbox"] {
     color: #fff;
 }
 
-.label ol {
+.label ul {
     display: flex;
     flex-wrap: wrap;
     font-size: 1.2rem;
@@ -517,13 +517,11 @@ input[type="checkbox"] {
     display: block;
 }
 
-
-/* Else チェックでElseとSteam  */
-[value="Default"]:checked~.targets .target:not([data-category~="On"]).target:not([data-category~="Off"]),
+[value="Played"]:checked~.targets .target:not([data-category~="On"]).target:not([data-category~="Off"]),
+[value="Non"]:checked~.targets .target:not([data-category~="Non"]),
 [value="On"]:checked~.targets .target:not([data-category~="On"]),
 [value="Off"]:checked~.targets .target:not([data-category~="Off"]),
 [value="Cocco-On"]:checked~.targets .target:not([data-category~="Cocco-On"]),
-[value="Non"]:checked~.targets .target:not([data-category~="Non"]),
 [value="Now"]:checked~.targets .target:not([data-category~="Now"]),
 [value="Playing"]:checked~.targets .target:not([data-category~="Playing"]),
 [value="Clear"]:checked~.targets .target:not([data-category~="Clear"]).target:not([data-category~="Part"]),
@@ -542,21 +540,6 @@ input[type="checkbox"] {
 [value="Free"]:checked~.targets .target:not([data-category~="Free"]) {
     display: none;
 }
-
-/*-----
-[value="Default"]:checked~.filters [for="Default"],
-[value="Non"]:checked~.filters [for~="Non"],
-[value="All"]:checked~.filters [for="All"],
-[value="On"]:checked~.filters [for="On"],
-[value="Off"]:checked~.filters [for="Off"],
-[value="Playing"]:checked~.filters [for="Playing"] [value="Clear"]:checked~.filters [for="Clear"],
-[value="Clear"]:checked~.filters [for="Clear"],
-[value="Part"]:checked~.filters [for="Part"],
-[value="Dont"]:checked~.filters [for="Dont"] {
-    background: #994B8A;
-    color: #fff;
-}
------*/
 
 /*-------------------------------------------
 

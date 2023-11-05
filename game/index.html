@@ -175,9 +175,9 @@
                 <h2 class="section-title">ゲーム一覧</h2>
 
                 <!-- フィルタ（ラジオボタン） -->
-                <input type="radio" name="categories" id="Default" value="Default" checked><!--配信ありとなし-->
+                <input type="radio" name="categories" id="All" value="All" checked><!--全部のゲーム-->
+                <input type="radio" name="categories" id="Played" value="Played"><!--配信ありとなし-->
                 <input type="radio" name="categories" id="Non" value="Non"><!--未プレイ-->
-                <input type="radio" name="categories" id="All" value="All"><!--すべて-->
 
                 <input type="radio" name="categories" id="On" value="On"><!--配信あり-->
                 <input type="radio" name="categories" id="Off" value="Off"><!--配信なし-->
@@ -208,35 +208,35 @@
                 <dl class="label">
                     <dt><img src="/game/img/svg/bx-joystick.svg" class="svg-icon-label"></dt>
                     <dd>
-                        <ol>
-                            <li><label for="Default" class="checked">プレイゲーム一覧</label></li>
+                        <ul>
+                            <li><label for="All" class="checked">全てのゲーム</label></li>
+                            <li><label for="Played">プレイゲーム一覧</label></li>
                             <li><label for="Non">未プレイゲーム</label></li>
-                            <li><label for="All">全てのゲーム</label></li>
-                        </ol>
+                        </ul>
                     </dd>
                     <dt><img src="/game/img/svg/bx-tv.svg" class="svg-icon-label"></dt>
                     <dd>
-                        <ol>
+                        <ul>
                             <li><label for="On">配信あり</label></li>
                             <li><label for="Off">配信なし</label></li>
                             <li><label for="Cocco-On">たろう配信あり</label></li>
 
-                        </ol>
+                        </ul>
                     </dd>
                     <dt><img src="/game/img/svg/bx-star.svg" class="svg-icon-label"></dt>
                     <dd>
-                        <ol>
+                        <ul>
                             <li><label for="Now">現在プレイ中</label></li>
                             <li><label for="Playing">継続中</label></li>
                             <li><label for="Clear">クリア済</label></li>
                             <li><label for="Part">ED未コンプ</label></li>
                             <li><label for="Stop">停止中</label></li>
                             <li><label for="Nothing">クリア条件なし</label></li>
-                        </ol>
+                        </ul>
                     </dd>
                     <dt><img src="/game/img/svg/bx-purchase-tag-alt.svg" class="svg-icon-label"></dt>
                     <dd>
-                        <ol>
+                        <ul>
                             <!-- <li><label for="Consumer">コンシューマーゲーム</label></li> -->
                             <li><label for="PS">PS</label></li>
                             <li><label for="PS_archive">PSアーカイブス</label></li>
@@ -247,7 +247,7 @@
                             <li><label for="Onlinegame">オンラインゲーム</label></li>
                             <li><label for="Steam">Steam</label></li>
                             <li><label for="Free">フリーゲーム</label></li>
-                        </ol>
+                        </ul>
                     </dd>
                 </dl>
 
