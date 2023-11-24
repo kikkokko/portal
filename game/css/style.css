@@ -519,6 +519,7 @@ input[type="radio"] {
 
 [value="Played"]:checked~.targets .target:not([data-category~="On"]).target:not([data-category~="Off"]),
 [value="Non"]:checked~.targets .target:not([data-category~="Non"]),
+[value="Gift"]:checked~.targets .target:not([data-category~="Gift"]),
 [value="On"]:checked~.targets .target:not([data-category~="On"]),
 [value="Off"]:checked~.targets .target:not([data-category~="Off"]),
 [value="Cocco-On"]:checked~.targets .target:not([data-category~="Cocco-On"]),

@@ -112,10 +112,11 @@
 
         <nav id="list-menu" class="menu mt50 mb50">
             <ul>
-                <li><a href="#now">進行中のゲーム</a></li>
-                <li><a href="#gamelist">コンシューマーゲーム</a></li>
-                <li><a href="#onlinegame">オンラインゲーム</a></li>
-                <li><a href="#free">フリーゲーム</a></li>
+                <li><a href="#now">プレイ中のゲーム</a></li>
+                <li><a href="#gamelist">コンシューマー</a></li>
+                <li><a href="#indie">インディー</a></li>
+                <!-- <li><a href="#onlinegame">オンライン</a></li> -->
+                <li><a href="#free">フリー</a></li>
                 <li><a href="#latest">最近クリアしたゲーム</a></li>
             </ul>
         </nav>
@@ -130,7 +131,7 @@
                 <h2 class="section-title">現在プレイ進行中</h2>
 
                 <ul class="game-list">
-                    <li class="target" data-category="Steam On Now Playing">
+                    <li class="target" data-category="Steam Indie On Now Playing">
                         <a href="/game/stardew-valley/">
                             <img src="/game/stardew-valley/package.png">
                             <h3 class="game-title">Stardew Valley</h3>
@@ -139,7 +140,7 @@
                         <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり" class="haishin-tag">配信あり</a><a href="/game/#プレイ中">プレイ中</a></p>
                     </li>
 
-                    <li class="target" data-category="Onlinegame Steam On Now Playing">
+                    <li class="target" data-category="Steam Indie On Now Playing">
                         <a href="/game/graveyard-keeper/">
                             <img src="/game/graveyard-keeper/package.png">
                             <h3 class="game-title">Graveyard Keeper</h3>
@@ -179,7 +180,6 @@
             </section>
             <!-- contents 現在プレイ中終わり -->
 
-
             <!-- contents ゲーム一覧 -->
             <div id="gamelist" class="filters">
 
@@ -189,6 +189,8 @@
                 <input type="radio" name="categories" id="All" value="All" checked><!--全部のゲーム-->
                 <input type="radio" name="categories" id="Played" value="Played"><!--配信ありとなし-->
                 <input type="radio" name="categories" id="Non" value="Non"><!--未プレイ-->
+                <input type="radio" name="categories" id="Gift" value="Gift"><!--プレゼントしてもらったゲーム-->
+
 
                 <input type="radio" name="categories" id="On" value="On"><!--配信あり-->
                 <input type="radio" name="categories" id="Off" value="Off"><!--配信なし-->
@@ -196,9 +198,10 @@
 
                 <input type="radio" name="categories" id="Now" value="Now"><!--今やってる（更新中）-->
                 <input type="radio" name="categories" id="Playing" value="Playing"><!--継続中-->
+                <input type="radio" name="categories" id="Stop" value="Stop"><!--停止中/やる気がない-->
+
                 <input type="radio" name="categories" id="Clear" value="Clear"><!--クリア済-->
                 <input type="radio" name="categories" id="Part" value="Part"><!--クリア済でEDは未コンプ。クリア済なのでクリアカテゴリに入っている-->
-                <input type="radio" name="categories" id="Stop" value="Stop"><!--停止中/やる気がない-->
                 <input type="radio" name="categories" id="Nothing" value="Nothing"><!--クリアの概念がない-->
                 <input type="radio" name="categories" id="Dont" value="Dont"><!--クリア未達成-->
 
@@ -223,6 +226,7 @@
                             <li><label for="All" class="checked">全てのゲーム</label></li>
                             <li><label for="Played">プレイゲーム一覧</label></li>
                             <li><label for="Non">未プレイゲーム</label></li>
+                            <li><label for="Gift">🎁</label></li>
                         </ul>
                     </dd>
                     <dt><img src="/game/img/svg/bx-tv.svg" class="svg-icon-label"></dt>
@@ -239,9 +243,9 @@
                         <ul>
                             <li><label for="Now">現在プレイ中</label></li>
                             <li><label for="Playing">継続中</label></li>
-                            <li><label for="Clear">クリア済</label></li>
-                            <li><label for="Part">ED未コンプ</label></li>
                             <li><label for="Stop">停止中</label></li>
+                            <li><label for="Clear">クリア済</label></li>
+                            <li><label for="Part">(ED未コンプ)</label></li>
                             <li><label for="Nothing">クリア条件なし</label></li>
                         </ul>
                     </dd>
@@ -295,6 +299,15 @@
                                 </a>
                                 <p class="series">アークザラッドシリーズ</p>
                                 <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/earth-defense-foce5/">
+                                    <img src="/game/earth-defense-foce5/package.png">
+                                    <h3 class="game-title">EARTH DEFENSE FORCE 5<span>地球防衛軍</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
                             <li class="target" data-category="PS On Clear Part">
@@ -594,6 +607,15 @@
                                 <p class="tag"><a href="#PSP">PSP</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
                             </li>
 
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/skyrim/">
+                                    <img src="/game/skyrim/package.png">
+                                    <h3 class="game-title">Skyrim<span>The Elder Scrolls V: Skyrim Special Edition</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
                             <li class="target" data-category="SFC On Stop">
                                 <a href="/game/super-mario-world/">
                                     <img src="/game/super-mario-world/package.png">
@@ -735,8 +757,17 @@
                                     <img src="/game/neo-atlas/package.png">
                                     <h3 class="game-title">Neo ATLAS</h3>
                                 </a>
-                                <p class="series"></p>
+                                <p class="series">Neo ATLASシリーズ</p>
                                 <p class="tag"><a href="#PSアーカイブス">PSアーカイブス</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/neoatlas1469/">
+                                    <img src="/game/neoatlas1469/package.png">
+                                    <h3 class="game-title">Neo ATLAS 1469</h3>
+                                </a>
+                                <p class="series">Neo ATLASシリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
                             <li class="target" data-category="PS On Clear">
@@ -829,6 +860,15 @@
                                 <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
+                            <li class="target non" data-category="Gift Onlinegame Steam Non">
+                                <a href="/game/pathfinder-kingmaker/">
+                                    <img src="/game/pathfinder-kingmaker/package.png">
+                                    <h3 class="game-title">Pathfinder: Kingmakers<span>Enhanced Plus Edition</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
                             <li class="target non" data-category="PSP Non">
                                 <a href="/game/phantasy-star-portable/">
                                     <img src="/game/phantasy-star-portable/package.png">
@@ -836,6 +876,33 @@
                                 </a>
                                 <p class="series"></p>
                                 <p class="tag"><a href="#PSP">PSP</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/fallout3/">
+                                    <img src="/game/fallout3/package.png">
+                                    <h3 class="game-title">Fallout3<span>Game of the Year Edition</span></h3>
+                                </a>
+                                <p class="series">Falloutシリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/fallout4/">
+                                    <img src="/game/fallout4/package.png">
+                                    <h3 class="game-title">Fallout4<span>Game of the Year Edition</span></h3>
+                                </a>
+                                <p class="series">Falloutシリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/fallout-now-vegas/">
+                                    <img src="/game/fallout-now-vegas/package.png">
+                                    <h3 class="game-title">Fallout<span>New Vegas</span></h3>
+                                </a>
+                                <p class="series">Falloutシリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
                             <li class="target" data-category="PS On Clear Part">
@@ -934,6 +1001,15 @@
                                 </a>
                                 <p class="series">MYSTシリーズ</p>
                                 <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Steam Non">
+                                <a href="/game/moon/">
+                                    <img src="/game/moon/package.png">
+                                    <h3 class="game-title">moon <span>Remix RPG Adventur</span></h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
                             <li class="target non" data-category="PS Non">
@@ -1074,38 +1150,11 @@
                     </section>
 
                     <!-- contents Steam -->
-                    <section id="Steam" class="Steam">
-                        <h2 class="section-title">Steam</h2>
+                    <section id="indie" class="indie">
+                        <h2 class="section-title">インディーゲーム</h2>
                         <ul class="game-list">
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/earth-defense-foce5/">
-                                    <img src="/game/earth-defense-foce5/package.png">
-                                    <h3 class="game-title">EARTH DEFENSE FORCE 5</h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/pathfinder-kingmaker/">
-                                    <img src="/game/pathfinder-kingmaker/package.png">
-                                    <h3 class="game-title">Pathfinder: Kingmakers<span>Enhanced Plus Edition</span></h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-                            <li class="target" data-category="Onlinegame Steam On Now Playing Nothing">
-                                <a href="/game/granado-espada/">
-                                    <img src="/game/granado-espada/package.png">
-                                    <h3 class="game-title">Granado Espada</h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア条件なし">クリア条件なし</a></p>
-                            </li>
-
-                            <li class="target" data-category="Onlinegame Steam On Now">
+                            <li class="target" data-category="Steam Indie On Now">
                                 <a href="/game/graveyard-keeper/">
                                     <img src="/game/graveyard-keeper/package.png">
                                     <h3 class="game-title">Graveyard Keeper</h3>
@@ -1114,7 +1163,7 @@
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
                             </li>
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
+                            <li class="target non" data-category="Gift Indie Onlinegame Steam Non">
                                 <a href="/game/kouunno-ooyasama/">
                                     <img src="/game/kouunno-ooyasama/package.png">
                                     <h3 class="game-title">幸運の大家様</h3>
@@ -1123,7 +1172,7 @@
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
-                            <li class="target" data-category="Gift Now Steam On Now Playing Nothing">
+                            <li class="target" data-category="Gift Steam Indie On Now Nothing">
                                 <a href="/game/stardew-valley/">
                                     <img src="/game/stardew-valley/package.png">
                                     <h3 class="game-title">Stardew Valley</h3>
@@ -1132,59 +1181,43 @@
                                 <p class="tag"><a href="#現在プレイ中">現在プレイ中</a><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#配信あり">配信あり</a><a href="#EDなし">EDなし</a></p>
                             </li>
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/skyrim/">
-                                    <img src="/game/skyrim/package.png">
-                                    <h3 class="game-title">Skyrim<span>The Elder Scrolls V: Skyrim Special Edition</span></h3>
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/portal/">
+                                    <img src="/game/portal/package.png">
+                                    <h3 class="game-title">PORTAL</h3>
                                 </a>
-                                <p class="series"></p>
+                                <p class="series">PORTALシリーズ</p>
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/neoatlas1469/">
-                                    <img src="/game/neoatlas1469/package.png">
-                                    <h3 class="game-title">Neo ATLAS 1469</h3>
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/portal2/">
+                                    <img src="/game/portal2/package.png">
+                                    <h3 class="game-title">PORTAL2</h3>
                                 </a>
-                                <p class="series">Neo ATLASシリーズ</p>
+                                <p class="series">PORTALシリーズ</p>
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/fallout3/">
-                                    <img src="/game/fallout3/package.png">
-                                    <h3 class="game-title">Fallout3<span>Game of the Year Edition</span></h3>
+
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/yomawari/">
+                                    <img src="/game/yomawari/package.png">
+                                    <h3 class="game-title">夜廻</h3>
                                 </a>
-                                <p class="series">Falloutシリーズ</p>
+                                <p class="series">夜廻シリーズ</p>
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/fallout4/">
-                                    <img src="/game/fallout4/package.png">
-                                    <h3 class="game-title">Fallout4<span>Game of the Year Edition</span></h3>
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/yomawari2/">
+                                    <img src="/game/yomawari2/package.png">
+                                    <h3 class="game-title">深夜廻</h3>
                                 </a>
-                                <p class="series">Falloutシリーズ</p>
+                                <p class="series">夜廻シリーズ</p>
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/fallout-now-vegas/">
-                                    <img src="/game/fallout-now-vegas/package.png">
-                                    <h3 class="game-title">Fallout<span>New Vegas</span></h3>
-                                </a>
-                                <p class="series">Falloutシリーズ</p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-                            <li class="target non" data-category="Gift Onlinegame Steam Non">
-                                <a href="/game/moon/">
-                                    <img src="/game/moon/package.png">
-                                    <h3 class="game-title">moon <span>Remix RPG Adventur</span></h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
                         </ul>
                     </section>
                     <!-- contents Steam 終わり-->
@@ -1195,14 +1228,23 @@
                         <h2 class="section-title">オンラインゲーム</h2>
                         <ul class="game-list">
 
-                            <li class="target" data-category="Onlinegame Off Nothing">
+                            <li class="target" data-category="Onlinegame Steam On Now Playing Nothing">
+                                <a href="/game/granado-espada/">
+                                    <img src="/game/granado-espada/package.png">
+                                    <h3 class="game-title">Granado Espada</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア条件なし">クリア条件なし</a></p>
+                            </li>
+
+                            <!-- <li class="target" data-category="Onlinegame Off Nothing">
                                 <a href="/game/jan-ryu-mon/">
                                     <img src="/game/jan-ryu-mon/package.jpg">
                                     <h3 class="game-title">雀龍門</h3>
                                 </a>
                                 <p class="series"></p>
                                 <p class="tag"><a href="/game/#その他">その他</a><a href="#配信なし">配信なし</a><a href="#EDなし">EDなし</a></p>
-                            </li>
+                            </li> -->
 
                             <li class="target" data-category="Onlinegame Off Nothing">
                                 <a href="/game/animal-crossing-pocket/">
