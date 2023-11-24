@@ -113,10 +113,10 @@
         <nav id="list-menu" class="menu mt50 mb50">
             <ul>
                 <li><a href="#now">プレイ中のゲーム</a></li>
-                <li><a href="#gamelist">コンシューマー</a></li>
-                <li><a href="#indie">インディー</a></li>
-                <!-- <li><a href="#onlinegame">オンライン</a></li> -->
-                <li><a href="#free">フリー</a></li>
+                <li><a href="#gamelist">ゲームリスト</a></li>
+                <!-- <li><a href="#indie">インディー</a></li> -->
+                <li><a href="#onlinegame">オンラインゲーム</a></li>
+                <li><a href="#free">フリーゲーム</a></li>
                 <li><a href="#latest">最近クリアしたゲーム</a></li>
             </ul>
         </nav>
@@ -220,7 +220,7 @@
                 <!-- フィルタ（ラベル） -->
 
                 <dl class="label">
-                    <dt><img src="/game/img/svg/bx-joystick.svg" class="svg-icon-label"></dt>
+                    <dt><img src="/game/img/svg/bx-filter.svg" class="svg-icon-label"></dt>
                     <dd>
                         <ul>
                             <li><label for="All" class="checked">全てのゲーム</label></li>
@@ -242,14 +242,14 @@
                     <dd>
                         <ul>
                             <li><label for="Now">現在プレイ中</label></li>
-                            <li><label for="Playing">継続中</label></li>
+                            <!-- <li><label for="Playing">継続中</label></li> -->
                             <li><label for="Stop">停止中</label></li>
                             <li><label for="Clear">クリア済</label></li>
                             <li><label for="Part">(ED未コンプ)</label></li>
                             <li><label for="Nothing">クリア条件なし</label></li>
                         </ul>
                     </dd>
-                    <dt><img src="/game/img/svg/bx-purchase-tag-alt.svg" class="svg-icon-label"></dt>
+                    <dt><img src="/game/img/svg/bx-joystick.svg" class="svg-icon-label"></dt>
                     <dd>
                         <ul>
                             <!-- <li><label for="Consumer">コンシューマーゲーム</label></li> -->
@@ -508,6 +508,15 @@
                                 <p class="tag"><a href="#PS">PS</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
+                            <li class="target" data-category="Steam Indie On Now">
+                                <a href="/game/graveyard-keeper/">
+                                    <img src="/game/graveyard-keeper/package.png">
+                                    <h3 class="game-title">Graveyard Keeper</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
+                            </li>
+
                             <li class="target" data-category="PS On Clear">
                                 <a href="/game/cross/">
                                     <img src="/game/cross/package.png">
@@ -533,6 +542,15 @@
                                 </a>
                                 <p class="series">幻想水滸伝シリーズ</p>
                                 <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a><a href="#ED未コンプ">ED未コンプ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Gift Indie Onlinegame Steam Non">
+                                <a href="/game/kouunno-ooyasama/">
+                                    <img src="/game/kouunno-ooyasama/package.png">
+                                    <h3 class="game-title">幸運の大家様</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
                             </li>
 
                             <li class="target" data-category="PS Off Cocco-On Clear Part">
@@ -614,6 +632,15 @@
                                 </a>
                                 <p class="series"></p>
                                 <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target" data-category="Gift Steam Indie On Now Nothing">
+                                <a href="/game/stardew-valley/">
+                                    <img src="/game/stardew-valley/package.png">
+                                    <h3 class="game-title">Stardew Valley</h3>
+                                </a>
+                                <p class="series"></p>
+                                <p class="tag"><a href="#現在プレイ中">現在プレイ中</a><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#配信あり">配信あり</a><a href="#EDなし">EDなし</a></p>
                             </li>
 
                             <li class="target" data-category="SFC On Stop">
@@ -976,6 +1003,24 @@
                                 <p class="tag"><a href="#PS">PS</a><a href="#配信あり">配信あり</a><a href="#停止中">停止中</a><a href="/game/#プレイ中">プレイ中</a></p>
                             </li>
 
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/portal/">
+                                    <img src="/game/portal/package.png">
+                                    <h3 class="game-title">PORTAL</h3>
+                                </a>
+                                <p class="series">PORTALシリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/portal2/">
+                                    <img src="/game/portal2/package.png">
+                                    <h3 class="game-title">PORTAL2</h3>
+                                </a>
+                                <p class="series">PORTALシリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
                             <li class="target" data-category="PS_archive Off Stop">
                                 <a href="/game/mahoutukaini-naru-houhou/">
                                     <img src="/game/mahoutukaini-naru-houhou/package.png">
@@ -1075,6 +1120,24 @@
                                 <p class="tag"><a href="#DS">DS</a><a href="#配信なし">配信なし</a><a href="#クリア">クリア</a></p>
                             </li>
 
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/yomawari/">
+                                    <img src="/game/yomawari/package.png">
+                                    <h3 class="game-title">夜廻</h3>
+                                </a>
+                                <p class="series">夜廻シリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
+                            <li class="target non" data-category="Steam Indie Non">
+                                <a href="/game/yomawari2/">
+                                    <img src="/game/yomawari2/package.png">
+                                    <h3 class="game-title">深夜廻</h3>
+                                </a>
+                                <p class="series">夜廻シリーズ</p>
+                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
+                            </li>
+
                             <li class="target" data-category="PS2 Off Clear">
                                 <a href="/game/yakuza/">
                                     <img src="/game/yakuza/package.png">
@@ -1149,78 +1212,14 @@
 
                     </section>
 
-                    <!-- contents Steam -->
+                    <!--
                     <section id="indie" class="indie">
                         <h2 class="section-title">インディーゲーム</h2>
                         <ul class="game-list">
 
-                            <li class="target" data-category="Steam Indie On Now">
-                                <a href="/game/graveyard-keeper/">
-                                    <img src="/game/graveyard-keeper/package.png">
-                                    <h3 class="game-title">Graveyard Keeper</h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#配信あり">配信あり</a><a href="#クリア">クリア</a></p>
-                            </li>
-
-                            <li class="target non" data-category="Gift Indie Onlinegame Steam Non">
-                                <a href="/game/kouunno-ooyasama/">
-                                    <img src="/game/kouunno-ooyasama/package.png">
-                                    <h3 class="game-title">幸運の大家様</h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-                            <li class="target" data-category="Gift Steam Indie On Now Nothing">
-                                <a href="/game/stardew-valley/">
-                                    <img src="/game/stardew-valley/package.png">
-                                    <h3 class="game-title">Stardew Valley</h3>
-                                </a>
-                                <p class="series"></p>
-                                <p class="tag"><a href="#現在プレイ中">現在プレイ中</a><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#配信あり">配信あり</a><a href="#EDなし">EDなし</a></p>
-                            </li>
-
-                            <li class="target non" data-category="Steam Indie Non">
-                                <a href="/game/portal/">
-                                    <img src="/game/portal/package.png">
-                                    <h3 class="game-title">PORTAL</h3>
-                                </a>
-                                <p class="series">PORTALシリーズ</p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-                            <li class="target non" data-category="Steam Indie Non">
-                                <a href="/game/portal2/">
-                                    <img src="/game/portal2/package.png">
-                                    <h3 class="game-title">PORTAL2</h3>
-                                </a>
-                                <p class="series">PORTALシリーズ</p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-
-                            <li class="target non" data-category="Steam Indie Non">
-                                <a href="/game/yomawari/">
-                                    <img src="/game/yomawari/package.png">
-                                    <h3 class="game-title">夜廻</h3>
-                                </a>
-                                <p class="series">夜廻シリーズ</p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
-                            <li class="target non" data-category="Steam Indie Non">
-                                <a href="/game/yomawari2/">
-                                    <img src="/game/yomawari2/package.png">
-                                    <h3 class="game-title">深夜廻</h3>
-                                </a>
-                                <p class="series">夜廻シリーズ</p>
-                                <p class="tag"><a href="/game/#Steam">Steam</a><a href="#ギフト">ギフトありがとう！</a><a href="#未プレイ">未プレイ</a></p>
-                            </li>
-
                         </ul>
                     </section>
-                    <!-- contents Steam 終わり-->
+                    -->
 
 
                     <!-- contents オンラインゲーム -->
