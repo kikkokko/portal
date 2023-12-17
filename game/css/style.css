@@ -372,6 +372,12 @@ s .hamburger_list {
     margin-left: 5px;
 }
 
+#list .section-title2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
 /*----------
  ⇓ ゲームタイトル表記
 ------------*/
@@ -384,6 +390,12 @@ s .hamburger_list {
 }
 
 #list .game-title span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left: 0.3rem;
+}
+
+#list .game-title .memo {
     font-size: 1.1rem;
     font-weight: bold;
     padding-left: 0.3rem;
@@ -572,13 +584,13 @@ input[type="radio"] {
     object-fit: cover;
 }
 
-/* .targets {
+.targets {
     border: solid 1px #333;
     border-radius: 10px;
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 3%;
-} */
+}
 
 .game-list li {
     width: 100%;
