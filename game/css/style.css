@@ -395,10 +395,9 @@ s .hamburger_list {
     padding-left: 0.3rem;
 }
 
-#list .game-title .memo {
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding-left: 0.3rem;
+#list .memo {
+    font-size: 1rem;
+    padding-left: 0.5rem;
 }
 
 #list .game-title span::before {
@@ -407,6 +406,14 @@ s .hamburger_list {
 
 #list .game-title span::after {
     content: "-";
+}
+
+#list .game-title .memo::before {
+    content: "(";
+}
+
+#list .game-title .memo::after {
+    content: ")";
 }
 
 /*----------
