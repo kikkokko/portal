@@ -98,7 +98,8 @@ li {
 -------------------------------------------*/
 #header {
     height: 50px;
-    background-color: #F4C7C3;
+    background-color: #FFD700;
+    /* background-color: #ffd538; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,12 +134,12 @@ li {
     font-size: 1.6rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 3px;
 }
 
 .global-navi_list li {
     text-align: center;
-    min-width: 30px;
+    min-width: 25px;
     line-height: normal;
 }
 
