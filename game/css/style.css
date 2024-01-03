@@ -548,7 +548,7 @@ input[type="radio"] {
 [value="Clear"]:checked~.targets .target:not([data-category~="Clear"]).target:not([data-category~="Part"]),
 [value="Part"]:checked~.targets .target:not([data-category~="Part"]),
 [value="Stop"]:checked~.targets .target:not([data-category~="Stop"]),
-[value="Nothing"]:checked~.targets .target:not([data-category~="Nothing"]),
+[value="NothingED"]:checked~.targets .target:not([data-category~="NothingED"]),
 [value="Consumer"]:checked~.targets .target:not([data-category~="consumer"]).target:not([data-category~="SFC"]).target:not([data-category~="PS"]).target:not([data-category~="PS_archive"]).target:not([data-category~="PS2"]).target:not([data-category~="PSP"]).target:not([data-category~="DS"]),
 [value="SFC"]:checked~.targets .target:not([data-category~="SFC"]),
 [value="PS"]:checked~.targets .target:not([data-category~="PS"]),
