@@ -78,13 +78,13 @@
                 <nav id="main-nav" class="main-nav">
                     <ul class="nav-list flex-PC">
                         <li><a href="#profile">Profile</a></li>
-                        <li><a href="#news">Updates</a>
+                        <!-- <li><a href="#news">Updates</a>
                             <ul class="main-nav__sublist">
                                 <li><a href="#new-video">Stream</a></li>
                                 <li><a href="#new-illustration">New arts</a></li>
                                 <li><a href="#new-article">Notes</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li><a href="#active">Activity</a>
                             <ul class="main-nav__sublist">
                                 <li><a href="#kikko">Kikko*</a></li>
@@ -200,168 +200,8 @@
 
 
 
-            <!----------------------------
 
-
-            更新ページ
-
-
-        ------------------------------>
-
-            <section id="news" class="wrapper">
-                <h2 class="headline">Updates</h2>
-
-                <!-- TwitchとYoutube -->
-                <section id="new-video" class="sub-content">
-
-                    <!-- ↓のdiv flex-PC wrap  -->
-                    <div class="u_new-video-grid">
-
-                        <!-- Youtube最新動画 -->
-                        <section id="youtube">
-                            <h4 class="sub-title link-effect1">
-                                <a href="https://www.youtube.com/@coccokikko" target="_blank" title="Youtube">
-                                    <img class="svg-h-icon" src="/img/svg/bxl-youtube.svg">Youtube
-                                </a>
-                            </h4>
-                            <div class="u_new-video-iframe">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNqNfLHg1hhHzQTxnnkvEbWiLdcCpeVZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                            <!--<ul class="u_active-box100 font-bold btn btn01 flex">
-                <li>
-                    <a href="https://www.youtube.com/@coccokikko" target="_blank">
-                        <img class="svg-icon" src="/img/svg/bx-tv.svg">Youtube</a>
-                </li>
-            </ul> -->
-                        </section>
-
-
-
-                        <!-- Twitch最新動画 -->
-                        <section id="Twitch">
-                            <h3 class="sub-title link-effect1">
-                                <a href="https://www.twitch.tv/kikkoch/" target="_blank">
-                                    <img class="svg-h-icon" src="/img/svg/bxl-twitch.svg">Twitch
-                                </a>
-                            </h3>
-                            <div class="u_new-video-iframe">
-                                <iframe id="embed-twitch" src="https://player.twitch.tv/?autoplay=false&collection=KNBEdVGxghUfMg&video=videoId&parent=kikko.pages.dev" frameborder="0" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
-                            </div>
-                            <!-- <ul class="u_active-box100 font-bold btn btn01 flex">
-                <li>
-                    <a href="https://www.twitch.tv/kikkoch/" target="_blank">
-                        <img class="svg-icon" src="/img/svg/bx-tv.svg">Twitch</a>
-                </li>
-            </ul>
-            -->
-                        </section>
-
-                    </div>
-                    <div>
-
-                        <ul class="u_active-box100 font-bold btn btn01 flex">
-                            <li>
-                                <a href="https://www.youtube.com/@coccokikko" target="_blank">
-                                    <img class="svg-icon" src="/img/svg/bx-tv.svg">Youtube</a>
-                            </li>
-                            <li>
-                                <a href="https://live.erinn.biz/userdata.php?uid://coccokikko:kukuluID/" target="_blank">
-                                    <img class="svg-icon" src="/img/svg/bx-tv.svg">Kukululive</a>
-                            </li>
-                            <li>
-                                <a href="https://www.twitch.tv/kikkoch/" target="_blank">
-                                    <img class="svg-icon" src="/img/svg/bx-tv.svg">Twitch</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- TwitchとYoutube終わり -->
-
-
-
-                <!-- 最新イラスト -->
-                <section id="new-illustration" class="sub-content">
-                    <div class="section-title link-effect1">
-                        <h3 class="sub-title">New Artworks</h3>
-                        <div class="indent font-small text-right font-bold"><a class="blank" href="https://kikkokkokko.tumblr.com/" target="_blank">Tumbler Toy-box*</a></div>
-                    </div>
-                    <div>
-
-                        <!-- <div class="box100 box3 radius10 bg-pink"> -->
-                        <div class=" box1 radius10 border-beige">
-
-                            <div class="u_newillust-grid">
-                                <!--参考元： https://www.photoclip.net/blog/2011/03/18/ -->
-                                <script type="text/javascript" src="https://kikkokkokko.tumblr.com/api/read/json?&type=photo"></script>
-                                <script type="text/javascript">
-                                    show_number = 4;
-                                    for (i = 0; i < show_number; i++) {
-                                        label = tumblr_api_read["posts"][i]["photo-url-400"];
-                                        url = tumblr_api_read["posts"][i]["url"];
-                                        caption = tumblr_api_read["posts"][i]["photo-caption"];
-                                        date = tumblr_api_read["posts"][i]["date-gmt"];
-                                        var d = new Date(date);
-                                        var dstr = d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate();
-                                        document.write(`
-
-
-                                    <div class="u_newillust-box">
-                                        <a href="${url}" target="_blank" class="u_newimage_link">
-                                            <img class="u_newillust-img" src="${label}">
-                                        </a>
-                                        <ul>
-                                            <li class="font-bold u_newillust-date link-effect1"><a href="${url}" target="_blank">${dstr}</a></li>
-                                        </ul>
-                                    </div>
-
-
-                                    `);
-                                    }
-                                </script>
-                            </div>
-                            <div>
-                                <ul class="u_active-box100 font-bold btn btn01 flex">
-                                    <li class=""><a href="https://kikkokkokko.tumblr.com/" target="_blank"><img class="svg-icon" src="/img/svg/bxl-tumblr.svg">Fanarts</a></li>
-                                    <li class=""><a href="https://kikko.art.blog/" target="_blank"><img class="svg-icon" src="/img/svg/bxl-wordpress.svg">landscapes・Foods</a></li>
-                                    <li class=""><a href="https://www.pixiv.net/users/1481084" target="_blank"><img class="svg-icon" src="/img/svg/sns_pixiv.svg"></a></li>
-                                    <li class=""><a href="https://www.deviantart.com/kikkokkokko" target="_blank"><img class="svg-icon" src="/img/svg/bxl-deviantart.svg"></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                </section>
-                <!-- 最新イラスト終わり -->
-
-
-                <!-- Tumbler最新記事 -->
-                <section id="new-article" class="sub-content">
-                    <div class="section-title">
-                        <h3 class="sub-title">News</h3>
-                        <div class="indent font-small font-bold text-right link-effect1"><a class="blank" href="https://kikkoyuzuki.tumblr.com/" target="_blank">Tumbler Kikko*note</a></div>
-                    </div>
-
-                    <!-- 参考: https://shirasaka.tv/2539 -->
-                    <ul class="u_article-list box1 radius10 bg-pink">
-                        <script type="text/javascript" src="https://kikkoyuzuki.tumblr.com/api/read/json?">
-                        </script>
-                        <dl id="tumblr-news" class="flex-PC"></dl>
-                        <div class="text-right font-bold u_article-all-btn btn btn01">
-                            <a href="https://kikkoyuzuki.tumblr.com/" target="_blank"><img class="svg-icon" src="/img/svg/bx-history.svg">UP DATAS</a>
-                        </div>
-                    </ul>
-                </section>
-                <!-- Tumbler最新記事終了 -->
-
-            </section>
-            <!-- 更新終わり -->
-
-
-
-
-
-
-
-            <!----------------------------
+        <!----------------------------
 
 
             活動
