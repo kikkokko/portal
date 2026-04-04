@@ -556,7 +556,7 @@ input[type="radio"] {
 [value="PS2"]:checked~.targets .target:not([data-category~="PS2"]),
 [value="PSP"]:checked~.targets .target:not([data-category~="PSP"]),
 [value="DS"]:checked~.targets .target:not([data-category~="DS"]),
-[value="Steam"]:checked~.targets .target:not([data-category~="Steam"]),
+[value="PC"]:checked~.targets .target:not([data-category~="PC"]),
 [value="Onlinegame"]:checked~.targets .target:not([data-category~="Onlinegame"]),
 [value="Free"]:checked~.targets .target:not([data-category~="Free"]) {
     display: none;
